@@ -1,0 +1,140 @@
+@font-face{
+    font-family: "Afacad";
+    src: url("../fonts/AfacadFlux-VariableFont_slnt\,wght.ttf");
+}
+
+@font-face{
+    font-family: "Cocogoose";
+    src: url("../fonts/Cocogoose-Pro-Regular-trial.ttf");
+}
+
+@-webkit-keyframes fadeout{
+    from{color: whitesmoke;}
+    to{color: #ba252e;}
+}
+
+@-webkit-keyframes opacity{
+    from{opacity: 100%;}
+    to{opacity: 80%;}
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    flex: 1;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0px 10px 0px;
+    font-family: Cocogoose;
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header a{
+    font-size: 3vw;
+    color: whitesmoke;
+    display: inline-block;
+    padding: 10px 50px 10px 50px;
+    font-weight: bolder;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+header a:hover{
+    animation: fadeout 0.2s linear 1 normal forwards;
+}
+
+footer{
+    background-color: #333;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+    font-family: Afacad;
+}
+
+footer a{
+    font-size: 1.5vw;
+    color: whitesmoke;
+    padding: 5px 25px 5px 25px;
+    font-weight: bolder;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+footer a:hover{
+    animation: fadeout 0.2s linear 1 normal forwards;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+}
+
+.footer-content img{
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.social-media{
+    max-height: 40px;
+    padding: 10px 25px 0px 15px;
+}
+
+footer a img:hover{
+    animation: opacity 0.2s linear 1 normal forwards;
+}
+
+#content{
+    padding: 125px 50px 0px 50px;
+    font-family: Afacad;
+    font-size: 150%;
+}
+
+#content h1{
+    font-family: Cocogoose;
+}
+
+#content h2{
+    font-family: Cocogoose;
+}
+
+figure{
+    text-align: center;
+    max-width: 300px;
+    display: inline-block;
+    flex-flow: column;
+}

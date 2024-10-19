@@ -1,0 +1,33 @@
+@font-face{
+    font-family: "Showdex";
+    src: url("../fonts/Showdex.ttf");
+}
+
+.showdex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Showdex;
+    color: #ba252e;
+    position: relative;
+    font-size: 100px;
+    transform: rotate(-7.5deg);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#content img{
+    max-height: 300px;
+    transform: rotateY(0deg) rotate(0deg);
+    transition: transform  1.5s;
+}
+
+#content img:hover{
+    transform: rotateY(180deg) rotate(0deg);
+}
+
+

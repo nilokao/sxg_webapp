@@ -1,0 +1,26 @@
+.noticias{
+    flex: 1;
+    height: 300px;
+    width: 800px;
+    display: flex;
+}
+.noticias img{
+    max-height: 200px;
+    padding-right: 50px;
+}
+.noticias h1{
+    font-size: larger;
+}
+.noticias h2{
+    font-size: large;
+    color: #333
+}
+.noticias h3{
+    font-size: medium;
+    color: #333
+}
+
+#content{
+    display: grid;
+    place-items: center;
+}
