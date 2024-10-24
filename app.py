@@ -1,29 +1,19 @@
 from flask import Flask, render_template
-import sqlite3
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+ 
+db = SQLAlchemy()
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__, template_folder='templates')
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./news.db'
 
-#rotas
-@app.route("/")
-def index():
-    return render_template('index.html')
+    db.init_app(app)
 
-@app.route("/historia")
-def historia():
-    return render_template('historia.html')
+    #importando as rotas
+    from routes import register_routes
+    register_routes(app, db)
 
-@app.route("/players")
-def players():
-    return render_template('players.html')
+    migrate = Migrate(app, db)
 
-@app.route("/noticias")
-def noticias():
-    return render_template('noticias.html')
-
-#cria páginas para cada usuário
-#@app.route("/user/<username>")
-#def users(username):
-#    return render_template("users.html", username=username)
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    return app
