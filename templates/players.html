@@ -3,28 +3,60 @@
     <head>
         <title>SX Gaming</title>
         <link rel="icon" type="image/x-icon" href="../static/media/img/favicon/favicon.ico">
+        <link rel="stylesheet" href="../static/css/base.css">
+        <link rel="stylesheet" href="../static/css/players.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/css/base.css">
     </head>
     <body>
         <header>
             <nav>
-                <a href="/">Home</a>
-                <a href="/historia">Nossa História</a>
-                <a href="/players">Players</a>
-                <a href="/noticias">Notícias</a>
+                <a href="index.html">Home</a>
+                <a href="historia.html">Nossa História</a>
+                <a href="players.html">Players</a>
+                <a href="noticias.html">Notícias</a>
             </nav>
         </header>
+        <h1 class="title">LINE DE LEAGUE OF LEGENDS</h1>
+        <div id="content">
+            <div class="carrossel">
+                <script src="../js/jogadores.js"></script>
 
-        <footer>
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../static/media/img/cards/TOPLANER.png" alt="Toplaner">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/img/cards/JUNGLER.png" alt="Jungler">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/img/cards/MIDLANER.png" alt="Midlaner">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/img/cards/ADCARRY.png" alt="ADC">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/media/img/cards/SUPORTE.png" alt="Suporte">
+                    </div>
+                </div>
+    
+                <div class="nav-arrows">
+                    <label class="prev" onclick="changeSlide(-1)">&#10094;</label>
+                    <label class="next" onclick="changeSlide(1)">&#10095;</label>
+                </div>
+
+            </div>
+        </div>            
+            
+
+        <footer style="margin-top: 0px;">
             <div class="footer-content">
                 <img src="../static/media/img/logo.png" alt="logo">
                 <div>© SX Gaming, 2024</div>
                 <a href="https://x.com/SxG_esports" target="_blank"><img src="../static/media/img/redes/x.png" alt="X/Twitter" class="social-media"></a>
             </div>
             <div>
-                <a href="privacy.html">Privacidade</a>
+                <a href="termosprivacidade.html">Privacidade</a>
                 <a href="terms.html">Termos de Uso</a>
                 <a href="contact.html">Contato</a>
             </div>

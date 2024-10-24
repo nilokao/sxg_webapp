@@ -1,26 +1,64 @@
-.noticias{
-    flex: 1;
-    height: 300px;
-    width: 800px;
-    display: flex;
-}
-.noticias img{
-    max-height: 200px;
-    padding-right: 50px;
-}
-.noticias h1{
-    font-size: larger;
-}
-.noticias h2{
-    font-size: large;
-    color: #333
-}
-.noticias h3{
-    font-size: medium;
-    color: #333
+@font-face {
+    font-family: "Afacad";
+    src: url("../fonts/AfacadFlux-VariableFont_slnt,wght.ttf");
 }
 
-#content{
-    display: grid;
-    place-items: center;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.noticias {
+    display: flex;
+    max-width: 800px;
+    min-height: 250px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex-direction: row;    
+}
+
+.noticias:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.imagem img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.conteudo {
+    max-width: 360px;
+}
+
+.noticias h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Afacad, Arial, sans-serif;
+}
+
+.noticias h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.noticias h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+span {
+    font-family: Afacad;
 }

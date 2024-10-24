@@ -1,0 +1,106 @@
+@font-face{
+    font-family: "Afacad";
+    src: url("../fonts/AfacadFlux-VariableFont_slnt\,wght.ttf");
+}
+
+@font-face{
+    font-family: "Cocogoose";
+    src: url("../fonts/Cocogoose-Pro-Regular-trial.ttf");
+}
+
+@keyframes changeBackground{
+    0%{background-color: #f9f9f9;}
+    100%{background-color: #333;}
+}
+
+@keyframes changeHeaderFooter{
+    0%{background-color: #333;}
+    100%{background-color: black;}
+}
+
+@keyframes changeTextColor{
+    0%{color: #333;}
+    100%{columns: #f9f9f9;}    
+}
+
+body{
+    background-color: #f9f9f9;
+    animation: changeBackground 2s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+header{
+    animation: changeHeaderFooter 2s forwards;
+}
+
+footer{
+    animation: changeHeaderFooter 2s forwards;
+}
+
+.carrossel{
+    margin-top: -100px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.slides{
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-arrows{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.nav-arrows label{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    pointer-events: all;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.nav-arrows label:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-arrows .prev{
+    left: 10px;
+}
+
+.nav-arrows .next{
+    right: 10px;
+}
+
+.title{
+    color: #f9f9f9;
+    animation: changeTextColor 2s forwards;
+    margin-top: 150px;
+    font-family: Cocogoose;
+}

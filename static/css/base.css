@@ -9,7 +9,7 @@
 }
 
 @-webkit-keyframes fadeout{
-    from{color: whitesmoke;}
+    from{color: #f9f9f9;}
     to{color: #ba252e;}
 }
 
@@ -29,6 +29,7 @@ html, body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #f9f9f9;
 }
 
 body{
@@ -52,7 +53,7 @@ header nav{
 
 header a{
     font-size: 3vw;
-    color: whitesmoke;
+    color: #f9f9f9;
     display: inline-block;
     padding: 10px 50px 10px 50px;
     font-weight: bolder;
@@ -74,16 +75,17 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: whitesmoke;
+    color: #f9f9f9;
     width: 100%;
     bottom: 0;
     margin-top: auto;
     font-family: Afacad;
+    margin-top: 100px;
 }
 
 footer a{
     font-size: 1.5vw;
-    color: whitesmoke;
+    color: #f9f9f9;
     padding: 5px 25px 5px 25px;
     font-weight: bolder;
     -webkit-touch-callout: none;
