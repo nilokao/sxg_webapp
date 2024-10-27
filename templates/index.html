@@ -16,18 +16,18 @@ SX Gaming | Home
 
     <div class="showdex">
         <p>OS SAMURAIS DO SEXO</p>
-        <img  id="samuraisxg" src="../static/media/img/samuraisxg.png" alt="Samurai SXG">
+        <img  id="samuraisxg" src="{{ url_for('static', filename='media/img/samuraisxg.png') }}" alt="Samurai SXG">
     </div>
 
     <br><br>
 
     <h2 style="text-align: center;">Últimas notícias:</h2>
     <div id="lastnews">
-        <script src="../static/js/index.js?v=1.1"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
         <ul id="news-list"></ul>
     </div>
 </div>
 
-<script src="../static/js/base.js?v=1.1"></script>
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
 <button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
 {% endblock %}

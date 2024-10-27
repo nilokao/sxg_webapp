@@ -2,7 +2,7 @@
 async function carregarUltimasNoticias() {
     try {
         // Carrega o conteúdo da página noticias.html
-        const response = await fetch('noticias.html');
+        const response = await fetch('noticias');
         
         // Verifica se o carregamento foi bem-sucedido
         if (!response.ok) {
