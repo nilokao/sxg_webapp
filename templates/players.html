@@ -9,6 +9,7 @@ SX Gaming | Players
 {% endblock %}
 
 {% block content %} 
+<script src="{{ url_for('static', filename='js/players.js') }}"></script>
 <div id="loader" class="loader"></div>
 <audio id="audio" src="{{ url_for('static', filename='audio/whoosh-cinematic-161021.mp3') }}"></audio>
 
@@ -40,7 +41,7 @@ SX Gaming | Players
 
     </div>
 </div>
-<script src="{{ url_for('static', filename='static/js/base.js') }}"></script>
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
 <button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
 </body>
 {% endblock %}
