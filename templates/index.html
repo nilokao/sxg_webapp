@@ -1,56 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt">
-    <head>
-        <title>SX Gaming</title>
-        <link rel="icon" type="image/x-icon" href="../static/media/img/favicon/favicon.ico">
-        <link rel="stylesheet" href="../static/css/base.css">
-        <link rel="stylesheet" href="../static/css/index.css">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/historia">Nossa História</a>
-                <a href="/players">Players</a>
-                <a href="/noticias">Notícias</a>
-            </nav>
-        </header>
+{% extends "base.html" %}
 
-        <div id="content">
-            <h1>Nós somos a SX Gaming. Seja bem-vindo(a) ao nosso site!</h1>
-            <p>Nós somos uma organização vigente desde 2022. Aqui você vai descobrir não só o nosso passado, como o presente e o futuro.</p>
-            <p style="text-align: right;">#GoSXG</p>
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
 
-            <div class="showdex">
-                <p>OS SAMURAIS DO SEXO</p>
-                <img  id="samuraisxg" src="../static/media/img/samuraisxg.png" alt="Samurai SXG">
-            </div>
+{% block title %} 
+SX Gaming | Home 
+{% endblock %}
 
-            <br><br>
+{% block content %}
+<div id="content">
+    <h1>Nós somos a SX Gaming. Seja bem-vindo(a) ao nosso site!</h1>
+    <p>Nós somos uma organização vigente desde 2022. Aqui você vai descobrir não só o nosso passado, como o presente e o futuro.</p>
+    <p style="text-align: right;">#GoSXG</p>
 
-            <h2 style="text-align: center;">Últimas notícias:</h2>
-            <div id="lastnews">
-                <script src="../static/js/index.js?v=1.1"></script>
-                <ul id="news-list"></ul>
-            </div>
-        </div>
-        
-        <script src="../static/js/base.js?v=1.1"></script>
-        <button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
+    <div class="showdex">
+        <p>OS SAMURAIS DO SEXO</p>
+        <img  id="samuraisxg" src="../static/media/img/samuraisxg.png" alt="Samurai SXG">
+    </div>
 
-        <footer>
-            <div class="footer-content">
-                <img src="../static/media/img/logo.png" alt="logo">
-                <div>© SX Gaming, 2024</div>
-                <a href="https://x.com/SxG_esports" target="_blank"><img src="../static/media/img/redes/x.png" alt="X/Twitter" class="social-media"></a>
-            </div>
-            <div style="padding-right: 100px;">
-                <a href="termosprivacidade.html">Privacidade</a>
-                <a href="terms.html">Termos de Uso</a>
-                <a href="mailto:sxgaming.org@gmail.com">Contato</a>
-            </div>
-        </footer>  
-    </body>
-</html>
+    <br><br>
+
+    <h2 style="text-align: center;">Últimas notícias:</h2>
+    <div id="lastnews">
+        <script src="../static/js/index.js?v=1.1"></script>
+        <ul id="news-list"></ul>
+    </div>
+</div>
+
+<script src="../static/js/base.js?v=1.1"></script>
+<button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
+{% endblock %}

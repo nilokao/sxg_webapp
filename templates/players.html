@@ -1,70 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt">
-    <head>
-        <title>SX Gaming</title>
-        <link rel="icon" type="image/x-icon" href="../static/media/img/favicon/favicon.ico">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/players.css')}}">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/historia">Nossa História</a>
-                <a href="/players">Players</a>
-                <a href="/noticias">Notícias</a>
-            </nav>
-        </header>
-        <script src="{{ url_for('static', filename='static/js/players.js')}}"></script>
-        <div id="loader" class="loader"></div>
-        <audio id="audio" src="../static/audio/whoosh-cinematic-161021.mp3"></audio>
-        
-        <h1 class="title">LINE DE LEAGUE OF LEGENDS</h1>
-        <div id="content">
-            <div class="carousel">
+{% extends "base.html" %}
 
-                <div class="slides">
-                    <div class="slide">
-                        <img src="../static/media/img/cards/TOPLANER.png" alt="Toplaner">
-                    </div>
-                    <div class="slide">
-                        <img src="../static/media/img/cards/JUNGLER.png" alt="Jungler">
-                    </div>
-                    <div class="slide">
-                        <img src="../static/media/img/cards/MIDLANER.png" alt="Midlaner">
-                    </div>
-                    <div class="slide">
-                        <img src="../static/media/img/cards/ADCARRY.png" alt="ADC">
-                    </div>
-                    <div class="slide">
-                        <img src="../static/media/img/cards/SUPORTE.png" alt="Suporte">
-                    </div>
-                </div>
-    
-                <div class="nav-arrows">
-                    <label class="prev" onclick="changeSlide(-1)">&#10094;</label>
-                    <label class="next" onclick="changeSlide(1)">&#10095;</label>
-                </div>
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/players.css') }}">
+{% endblock %}
 
+{% block title %} 
+SX Gaming | Players 
+{% endblock %}
+
+{% block content %} 
+<div id="loader" class="loader"></div>
+<audio id="audio" src="{{ url_for('static', filename='audio/whoosh-cinematic-161021.mp3') }}"></audio>
+
+<h1 class="title">LINE DE LEAGUE OF LEGENDS</h1>
+<div id="content">
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <img src="{{ url_for('static', filename='media/img/cards/TOPLANER.png') }}" alt="Toplaner">
+            </div>
+            <div class="slide">
+                <img src="{{ url_for('static', filename='media/img/cards/JUNGLER.png') }}" alt="Jungler">
+            </div>
+            <div class="slide">
+                <img src="{{ url_for('static', filename='media/img/cards/MIDLANER.png') }}" alt="Midlaner">
+            </div>
+            <div class="slide">
+                <img src="{{ url_for('static', filename='media/img/cards/ADCARRY.png') }}" alt="ADC">
+            </div>
+            <div class="slide">
+                <img src="{{ url_for('static', filename='media/img/cards/SUPORTE.png') }}" alt="Suporte">
             </div>
         </div>
-    
-        <script src="../static/js/base.js"></script>
-        <button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
-    
-        <footer>
-            <div class="footer-content">
-                <img src="../static/media/img/logo.png" alt="logo">
-                <div>© SX Gaming, 2024</div>
-                <a href="https://x.com/SxG_esports" target="_blank"><img src="../static/media/img/redes/x.png" alt="X/Twitter" class="social-media"></a>
-            </div>
-            <div style="padding-right: 100px;">
-                <a href="termosprivacidade.html">Privacidade</a>
-                <a href="terms.html">Termos de Uso</a>
-                <a href="mailto:sxgaming.org@gmail.com">Contato</a>
-            </div>
-        </footer>  
-    </body>
-</html>
+
+        <div class="nav-arrows">
+            <label class="prev" onclick="changeSlide(-1)">&#10094;</label>
+            <label class="next" onclick="changeSlide(1)">&#10095;</label>
+        </div>
+
+    </div>
+</div>
+<script src="{{ url_for('static', filename='static/js/base.js') }}"></script>
+<button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
+</body>
+{% endblock %}

@@ -18,6 +18,10 @@ def register_routes(app, db):
     @app.route("/noticias")
     def noticias():
         return render_template('noticias.html')
+    
+    @app.route("/termos")
+    def termos():
+        return render_template('termos.html')
 
     #cria páginas para cada usuário
     #@app.route("/user/<username>")
