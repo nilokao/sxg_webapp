@@ -3,8 +3,8 @@
     <head>
         <title>SX Gaming</title>
         <link rel="icon" type="image/x-icon" href="../static/media/img/favicon/favicon.ico">
-        <link rel="stylesheet" href="../static/css/base.css">
-        <link rel="stylesheet" href="../static/css/players.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/players.css')}}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -17,7 +17,7 @@
                 <a href="/noticias">Notícias</a>
             </nav>
         </header>
-        <script src="../static/js/players.js"></script>
+        <script src="{{ url_for('static', filename='static/js/players.js')}}"></script>
         <div id="loader" class="loader"></div>
         <audio id="audio" src="../static/audio/whoosh-cinematic-161021.mp3"></audio>
         
