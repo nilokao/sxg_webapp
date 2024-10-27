@@ -1,4 +1,4 @@
-from app import db
+from app import create_app, db
 
 class News(db.Model):
     __tablename__ = 'noticias'
