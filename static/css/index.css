@@ -9,7 +9,6 @@
     justify-content: center;
     font-family: Showdex;
     color: #ba252e;
-    position: relative;
     font-size: 100px;
     transform: rotate(-7.5deg);
     -webkit-touch-callout: none;
@@ -20,14 +19,44 @@
     user-select: none;
 }
 
-#content img{
+#samuraisxg{
     max-height: 300px;
     transform: rotateY(0deg) rotate(0deg);
     transition: transform  1.5s;
 }
 
-#content img:hover{
+#samuraisxg:hover{
     transform: rotateY(180deg) rotate(0deg);
 }
 
+#lastnews{
+    margin-left: 0%;
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+}
 
+#lastnews ul{
+    display: flex;
+}
+
+.news{
+    max-width: 500px;
+    max-height: 600px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px
+}
+
+.news:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+.image{
+    height: 250px;
+    width: 300px;
+}

@@ -140,3 +140,23 @@ figure{
     display: inline-block;
     flex-flow: column;
 }
+
+.top-button{
+    font-family: Afacad;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.top-button:hover{
+    animation: opacity 0.5s linear 0.5 forwards;
+}
