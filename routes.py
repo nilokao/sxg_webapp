@@ -6,6 +6,7 @@ from app import create_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import abort
 from functools import wraps 
+from models import News
 
 def admin_required(f):
     @wraps(f)
@@ -19,7 +20,8 @@ def register_routes(app, db, login_manager):
 
     @app.route("/")
     def index():
-        return render_template('index.html')
+        noticias = News.query.order_by(News.data.desc()).limit(3).all()
+        return render_template('index.html', noticias=noticias)
 
     @app.route("/historia")
     def historia():
@@ -31,7 +33,8 @@ def register_routes(app, db, login_manager):
 
     @app.route("/noticias")
     def noticias():
-        return render_template('noticias.html')
+        noticias = News.query.order_by(News.data.desc()).all()
+        return render_template('noticias.html', noticias=noticias)
     
     @app.route("/termos")
     def termos():

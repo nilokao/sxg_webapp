@@ -60,10 +60,10 @@ SX Gaming | Admin Page
         <h1>Adicionar Notícia</h1>
         <form method="POST" action="{{ url_for('add_noticia') }}">
             <label for="titulo">Título:</label>
-            <input type="text" id="titulo" name="titulo" maxlength="30" required>
+            <input type="text" id="titulo" name="titulo" maxlength="150" required>
 
             <label for="resumo">Resumo:</label>
-            <input type="text" id="resumo" name="resumo" maxlength="100" required>
+            <input type="text" id="resumo" name="resumo" maxlength="150" required>
 
             <label for="conteudo">Conteúdo:</label>
             <textarea id="conteudo" name="conteudo" maxlength="500" rows="5" required></textarea>
