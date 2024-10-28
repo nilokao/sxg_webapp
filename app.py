@@ -1,12 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
- 
-db = SQLAlchemy()
+from flask_login import LoginManager
+
 
 def create_app():
     app = Flask(__name__, template_folder='templates')
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./news.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./sxgaming.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.secret_key = '123'
+
+    db = SQLAlchemy()
+    
+    login_manager = LoginManager(app)
+    login_manager.login_view = 'login'
+    
+
 
     db.init_app(app)
 
