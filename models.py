@@ -14,6 +14,10 @@ class News(db.Model):
         return f'ID: {self.id}, Title: {self.title}, Date Published: {self.date_published}'
 
 class User(db.Model, UserMixin):
+    __tablename__ = 'usuarios'
+
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), nullable=False, unique=True)
+    email = db.Column(db.String(150), nullable=False, unique=True)
     password = db.Column(db.String(150), nullable=False)
+    is_admin = db.Column(db.Boolean, default=False)

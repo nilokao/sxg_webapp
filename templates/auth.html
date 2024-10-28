@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/auth.css')}}">
+{% endblock %}
+
+
+{% block title %}
+SX Gaming - SignIn/SingUp
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="auth-container">
+        <h2 id="auth-title">Login</h2>
+        <form method="POST" id="auth-form" novalidate>
+            <input type="hidden" name="action" value="login" id="auth-action">
+
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" name="username" placeholder="Usuário" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" name="password" placeholder="Senha" required>
+            </div>
+
+            <!-- Campo de email apenas para o registro -->
+            <div class="input-group" id="email-field" style="display: none;">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Entrar</button>
+        </form>
+
+        <button onclick="toggleAuthMode()" class="toggle-btn" id="toggle-btn">Registrar-se</button>
+    </div>
+</div>
+
+<script>
+    function toggleAuthMode() {
+        const authTitle = document.getElementById('auth-title');
+        const authAction = document.getElementById('auth-action');
+        const submitBtn = document.querySelector('.submit-btn');
+        const toggleBtn = document.getElementById('toggle-btn');
+        const emailField = document.getElementById('email-field');
+        const emailInput = emailField.querySelector('input[name="email"]');
+
+        if (authAction.value === 'login') {
+            authAction.value = 'register';
+            authTitle.textContent = 'Registrar';
+            submitBtn.textContent = 'Registrar';
+            toggleBtn.textContent = 'Login';
+            emailField.style.display = 'block';
+            emailInput.required = true;
+        } else {
+            authAction.value = 'login';
+            authTitle.textContent = 'Login';
+            submitBtn.textContent = 'Entrar';
+            toggleBtn.textContent = 'Registrar-se';
+            emailField.style.display = 'none';
+            emailInput.required = false;
+        }
+    }
+</script>
+
+{% endblock %}

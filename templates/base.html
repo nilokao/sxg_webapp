@@ -17,6 +17,17 @@
             <a href="/historia">Nossa História</a>
             <a href="/players">Players</a>
             <a href="/noticias">Notícias</a>
+        
+            {% if current_user.is_authenticated %}
+                <a href="/logout">Logout</a>
+                {% if current_user.is_admin %}
+                    <a href="/adm">Administração</a>
+                {% endif %}
+
+                {% else %}
+                <a href="/auth">Login/Registrar</a>
+            {% endif %}
+        
         </nav>
     </header>
 

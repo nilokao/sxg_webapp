@@ -55,10 +55,13 @@ header nav{
 }
 
 header a{
-    font-size: 3vw;
+    /* font-size: 3vw; */
+    font-size: 2vw;
     color: #f9f9f9;
     display: inline-block;
-    padding: 10px 50px 10px 50px;
+    /* padding: 10px 50px 10px 50px; */
+    padding: 5px, 15px;
+    margin: 10px;
     font-weight: bolder;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
