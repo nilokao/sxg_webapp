@@ -20,12 +20,22 @@ SX Gaming | Home
     </div>
 
     <br><br>
-
-    <h2 style="text-align: center;">Últimas notícias:</h2>
-    <div id="lastnews">
-        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-        <ul id="news-list"></ul>
-    </div>
+<!--  -->
+<h2 style="text-align: center;">Últimas notícias:</h2>
+<div id="lastnews">
+    <ul id="news-list">
+        {% for noticia in noticias %}
+            <li>
+                <div class="news">
+                    <img class="image" src="{{ noticia.image_link }}" alt="{{ noticia.titulo }}">
+                    <h3>{{ noticia.title }}</h3>
+                    <p><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></p>
+                    <p>{{ noticia.resume }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 </div>
 
 <script src="{{ url_for('static', filename='js/base.js') }}"></script>

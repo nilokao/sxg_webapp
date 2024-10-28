@@ -20,7 +20,7 @@ def register_routes(app, db, login_manager):
 
     @app.route("/")
     def index():
-        noticias = News.query.order_by(News.data.desc()).limit(3).all()
+        noticias = News.query.order_by(News.date_published.desc()).limit(3).all()
         return render_template('index.html', noticias=noticias)
 
     @app.route("/historia")
@@ -33,7 +33,7 @@ def register_routes(app, db, login_manager):
 
     @app.route("/noticias")
     def noticias():
-        noticias = News.query.order_by(News.data.desc()).all()
+        noticias = News.query.order_by(News.date_published.desc()).all()
         return render_template('noticias.html', noticias=noticias)
     
     @app.route("/termos")
