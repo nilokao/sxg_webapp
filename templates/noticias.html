@@ -9,117 +9,25 @@ SX Gaming | Notícias
 {% endblock %}
 
 {% block content %} 
-<body>
+
     <div id="content">
-        <div class="news" id="0010">
-            <div class="image">
-                <img src="https://i.ytimg.com/vi/5njjHPNor5s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDR5Q5WEoSNvXE7UXYmjBD4dOO1OA" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Gus o trem foi votar</h1>
-                <h3>27/10/2024 - 10:15</h3>
-                <h2>Gus o trem encontrou Anelise e sua irmã enquanto estava indo votar para prefeito</h2>
-            </div>
-        </div>
-        
-        <div class="news" id="0009">
-            <div class="image">
-                <img src="https://images.vexels.com/content/143555/preview/red-and-yellow-3d-question-mark-40e32d.png" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Onde está a dedicação?</h1>
-                <h3>25/10/2024 - 10:13</h3>
-                <h2>Todos os jogadores decidiram tirar um dia de folga hoje, apenas Akkinory e talvez o law joguem hoje</h2>
-            </div>
-        </div>
-        
-        <div class="news" id="0008">
-            <div class="image">
-                <img src="https://preview.redd.it/k8km0arr4pfb1.png?width=640&crop=smart&auto=webp&s=6ee07819041a95e4e4f8e0f009f91c7581a1402a" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Jungler toma restrição de chat</h1>
-                <h3>24/10/2024 - 15:00</h3>
-                <h2>Provando mais uma vez um ponto, o jungler easymoneysniper tomou mais um banimento de chat</h2>
-            </div>
-        </div>
-        
-        <div class="news" id="0007">
-            <div class="image">
-                <img src="../static/media/img/noticias/caboderede.png" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Jogador passa cabo de rede</h1>
-                <h3>24/10/2024 - 10:22</h3>
-                <h2>O toplaner kekko, em sua bolsa, passou um cabo de rede e o crimpou</h2>
-            </div>
-        </div>
+        {% for noticia in noticias %}
+            <li style="list-style: none;">
+                <div class="news">
 
-        <div class="news" id="0006">
-            <div class="image">
-                <img src="https://encurtador.com.br/f41B2" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Akkinory teme perder tudo</h1>
-                <h3>24/10/2024 - 08:51</h3>
-                <h2>Akkinory, suporte da SXG, está com medo de perder seus bens, devido às fortes chuvas em sua cidade</h2>
-            </div>
-        </div>
-        
-        <div class="news" id="0005">
-            <div class="image">
-                <img src="https://lapinf.ufn.edu.br/img/logoUFN.png" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Jogadores farão o ENEM na mesma sala</h1>
-                <h3>22/10/2024 - 10:50</h3>
-                <h2>Para o desespero da UFN, nossa botlane fará o ENEM juntos, na sala <span><b>311</b></span>, que Deus os abençoe</h2>
-            </div>
-        </div>
-
-        <div class="news" id="0004">
-            <div class="image">
-                <img src="https://encurtador.com.br/a0K4n" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Akkinory ameaça aliados</h1>
-                <h3>18/10/2024 - 22:43</h3>
-                <h2>Akkinory ao jogar na conta Lazorp, ameaçou arrancar os braços dos seus aliados, pois eles não os mereciam</h2>
-            </div>
-        </div>
-
-        <div class="news" id="0003">
-            <div class="image">
-                <img src="https://superprobettanin.com.br/wp-content/uploads/2022/01/mao-com-luvas-de-borracha-segurando-saco-de-lixo-acima-de-lixeira.jpeg" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Akkinory checa o lixo para confirmar o recorde</h1>
-                <h3>22/10/2024 - 11:32</h3>
-                <h2>O suporte Akkinory pegou as embalagens e ostenta uma nova marca fora do comum</h2>
-            </div>
-        </div>
-        
-        <div class="news" id="0002">
-            <div class="image">
-                <img src="https://cdn.iset.io/assets/00946/produtos/787/wafferchocolate.jpg" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Akkinory bate recorde pessoal de waffers</h1>
-                <h3>16/10/2024 - 21:39</h3>
-                <h2>O suporte Akkinory devorou uma quantia doentia de waffers</h2>
-            </div>
-        </div>
-        
-        <div class="news" id="0001">
-            <div class="image">
-                <img src="https://i.zst.com.br/thumbs/12/2/30/-1162318911.jpg" alt="Imagem de Notícia">
-            </div>
-            <div class="newscontent">
-                <h1>Kekko compra novo notebook</h1>
-                <h3>12/10/2024 - 12:00</h3>
-                <h2>O toplaner kekko comprou um novo notebook, clique para ver mais</h2>
-            </div>
-        </div>
+                    <div class="image">
+                        <img src="{{ noticia.image_link }}" alt="{{ noticia.titulo }}">
+                    </div>
+                    
+                    <div class="newscontent">
+                        <h1>{{ noticia.title }}</h1>
+                        <h3><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></h3>
+                        <h2>{{ noticia.resume }}</h2>
+                    </div>
+                    
+                </div>
+            </li>
+        {% endfor %}
     </div>
 
     <script src="{{ url_for('static', filename='js/base.js')}}"></script>

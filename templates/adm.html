@@ -52,6 +52,17 @@ SX Gaming | Admin Page
     button:hover {
         background-color: #ba252fbe;
     }
+    .news{
+        padding: 0;
+        margin: 3px;
+        height: 50px;
+        border: solid 1px black;
+        display: flex;
+    }
+    .img{
+        height: 100%;
+    }
+
 </style>
 
 <body>
@@ -73,6 +84,21 @@ SX Gaming | Admin Page
 
             <button type="submit">Enviar</button>
         </form>
+    </div>
+
+    <div class="all-news">
+        <div class="list-news">
+            {% for noticia in noticias %}
+            <li style="list-style: none;">
+                <div class="news">
+                    <img class="image" src="{{ noticia.image_link }}">
+                    <p><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></p>
+                    <h3>{{ noticia.title }}</h3>
+                    <p>{{ noticia.resume }}</p>
+                </div>
+            </li>
+        {% endfor %}
+        </div>
     </div>
 </div>
 

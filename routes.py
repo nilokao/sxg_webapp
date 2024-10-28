@@ -44,7 +44,8 @@ def register_routes(app, db, login_manager):
     @login_required
     @admin_required
     def adm():
-        return render_template('adm.html')
+        noticias = News.query.order_by(News.date_published.desc()).all()
+        return render_template('adm.html', noticias=noticias)
     
     @app.route("/auth", methods=['GET', 'POST'])
     def auth():
