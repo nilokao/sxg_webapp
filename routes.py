@@ -94,14 +94,17 @@ def register_routes(app, db, login_manager):
     def add_noticia():
         if request.method == 'POST':
             title = request.form['titulo']
+            resume = request.form['resumo']
             article = request.form['conteudo']
+            author_id = current_user.id
             image_link = request.form['img_link']
             date_published = datetime.now()
 
-            nova_noticia = News(title=title, article=article, image_link=image_link, date_published=date_published)
+            nova_noticia = News(title=title, resume=resume, article=article, author_id=author_id, image_link=image_link, date_published=date_published)
             db.session.add(nova_noticia)
             db.session.commit()
 
+            flash("Noticia adicionada com sucesso")
             return redirect(url_for('adm'))
 
         return render_template('adm.html')

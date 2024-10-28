@@ -52,30 +52,28 @@ SX Gaming | Admin Page
     button:hover {
         background-color: #ba252fbe;
     }
-    
 </style>
 
 <body>
 <div id="content">
     <div class="form-container">
         <h1>Adicionar Notícia</h1>
-        <form method="POST" action="{{ url_for('add_noticia') }}" >
+        <form method="POST" action="{{ url_for('add_noticia') }}">
             <label for="titulo">Título:</label>
-            <input type="text" id="titulo" maxlength="30" required>
+            <input type="text" id="titulo" name="titulo" maxlength="30" required>
 
             <label for="resumo">Resumo:</label>
-            <input type="text" id="resumo" maxlength="100" required>
+            <input type="text" id="resumo" name="resumo" maxlength="100" required>
 
             <label for="conteudo">Conteúdo:</label>
-            <textarea id="conteudo" maxlength="500" rows="5" required></textarea>
+            <textarea id="conteudo" name="conteudo" maxlength="500" rows="5" required></textarea>
 
             <label for="img_link">Link da Imagem:</label>
-            <input type="text" id="img_link" maxlength="150" required>
+            <input type="text" id="img_link" name="img_link" maxlength="150" required>
 
             <button type="submit">Enviar</button>
         </form>
     </div>
-
 </div>
 
 {% endblock %}
