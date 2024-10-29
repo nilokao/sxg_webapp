@@ -4,14 +4,19 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+#content{
+    padding-left: 0;
+}
+
 .auth-container {
     width: 100%;
-    max-width: 400px;
+    min-width: 400px;
+    max-width: 600px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -27,8 +32,9 @@ h2 {
 
 /* Estilo dos campos de entrada */
 .input-group {
-    margin-bottom: 15px;
     text-align: left;
+    position: relative;
+    margin-bottom: 15px;
 }
 
 .input-group label {
@@ -42,14 +48,13 @@ h2 {
     width: 100%;
     padding: 10px;
     font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #666;
     box-sizing: border-box;
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #5a67d8;
+    border-color: #ba252e;
 }
 
 /* Botão de submissão */
@@ -58,7 +63,6 @@ h2 {
     padding: 10px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -70,16 +74,43 @@ h2 {
 }
 
 .submit-btn:hover {
-    background-color: #9c1b24;
+    background-color: #A62028;
 }
 
 .toggle-btn {
     background-color: transparent;
-    color: #9c1b24;
+    color: #A62028;
     margin-top: 15px;
     font-size: 14px;
 }
 
 .toggle-btn:hover {
     text-decoration: underline;
+}
+
+.error-message{
+    color: #ba252e;
+    font-size: 12px;
+    display: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0;
+    color: #333;
+}
+
+.toggle-password img{
+    max-height: 3vh;
+}
+
+/* Ajuste para os campos de senha e a posição do ícone de olho */
+.input-group input[type="password"],
+.input-group input[type="text"] {
+    padding-right: 30px; /* Espaço para o ícone de olho */
 }

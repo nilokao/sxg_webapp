@@ -3,9 +3,9 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     const topButton = document.getElementById("topButton");
     if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-        topButton.style.opacity = 1;
+        topButton.classList.add('show');
     } else {
-        topButton.style.opacity = 0;
+        topButton.classList.remove('show');
     }
 }
 
@@ -14,5 +14,4 @@ function voltarAoTopo() {
         top: 0,
         behavior: 'smooth'
     });
-    const topButton = document.getElementById("topButton");
 }

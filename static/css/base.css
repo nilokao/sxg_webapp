@@ -54,6 +54,11 @@ header nav{
     justify-content: space-between;
 }
 
+header nav a{
+    text-align: center;
+    width: 20vw;
+}
+
 header a{
     /* font-size: 3vw; */
     font-size: 2vw;
@@ -146,8 +151,7 @@ figure{
     display: inline-block;
     flex-flow: column;
 }
-
-.top-button{
+.top-button {
     font-family: Afacad;
     position: fixed;
     bottom: 15px;
@@ -158,11 +162,26 @@ figure{
     border: none;
     cursor: pointer;
     font-size: 25px;
-    display: block;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
-.top-button:hover{
-    animation: opacity 0.5s linear 0.5 forwards;
+.top-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes backgroundColorChange {
+    0% {
+        background-color: #333;
+    }
+    100% {
+        background-color: #666;
+    }
+}
+
+/* Aplica a animação ao hover */
+.top-button:hover {
+    animation: backgroundColorChange 1s forwards ease-in-out;
 }

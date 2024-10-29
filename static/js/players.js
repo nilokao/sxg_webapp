@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Toca o áudio automaticamente após o carregamento
         const audio = document.getElementById("audio");
-        audio.volume = 0.3;
-        audio.playbackRate = 0.7;
+        audio.volume = 0.1;
+        audio.playbackRate = 0.75;
         audio.play().catch(error => {
             console.log("O áudio não pôde ser reproduzido automaticamente:", error);
         });

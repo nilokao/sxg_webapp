@@ -13,23 +13,33 @@ SX Gaming - SignIn/SingUp
 <div id="content">
     <div class="auth-container">
         <h2 id="auth-title">Login</h2>
-        <form method="POST" id="auth-form" novalidate>
+        <form method="POST" id="auth-form" novalidate onsubmit="return validateForm()">
             <input type="hidden" name="action" value="login" id="auth-action">
 
             <div class="input-group">
                 <label for="username">Usuário</label>
                 <input type="text" name="username" placeholder="Usuário" required>
+                <span class="error-message"></span>
             </div>
 
-            <div class="input-group">
+            <div class="input-group" id="password">
                 <label for="password">Senha</label>
                 <input type="password" name="password" placeholder="Senha" required>
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password')">👁️</button>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="input-group" id="password-check">
+                <label for="password-check">Verifique sua senha</label>
+                <input type="password" name="password-check" placeholder="Digite novamente sua senha" required>
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password-check')">👁️</button>
+                <span class="error-message"></span>
             </div>
 
-            <!-- Campo de email apenas para o registro -->
             <div class="input-group" id="email-field" style="display: none;">
                 <label for="email">Email</label>
                 <input type="email" name="email" placeholder="Email" required>
+                <span class="error-message"></span>
             </div>
 
             <button type="submit" class="submit-btn">Entrar</button>
@@ -39,31 +49,7 @@ SX Gaming - SignIn/SingUp
     </div>
 </div>
 
-<script>
-    function toggleAuthMode() {
-        const authTitle = document.getElementById('auth-title');
-        const authAction = document.getElementById('auth-action');
-        const submitBtn = document.querySelector('.submit-btn');
-        const toggleBtn = document.getElementById('toggle-btn');
-        const emailField = document.getElementById('email-field');
-        const emailInput = emailField.querySelector('input[name="email"]');
+<script src="{{url_for('static', filename='js/auth.js')}}"></script>
 
-        if (authAction.value === 'login') {
-            authAction.value = 'register';
-            authTitle.textContent = 'Registrar';
-            submitBtn.textContent = 'Registrar';
-            toggleBtn.textContent = 'Login';
-            emailField.style.display = 'block';
-            emailInput.required = true;
-        } else {
-            authAction.value = 'login';
-            authTitle.textContent = 'Login';
-            submitBtn.textContent = 'Entrar';
-            toggleBtn.textContent = 'Registrar-se';
-            emailField.style.display = 'none';
-            emailInput.required = false;
-        }
-    }
-</script>
 
 {% endblock %}
