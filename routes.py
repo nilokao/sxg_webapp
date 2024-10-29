@@ -6,7 +6,7 @@ from app import create_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import abort
 from functools import wraps 
-from models import News
+from models import News, User
 
 def admin_required(f):
     @wraps(f)
@@ -45,7 +45,8 @@ def register_routes(app, db, login_manager):
     @admin_required
     def adm():
         noticias = News.query.order_by(News.date_published.desc()).all()
-        return render_template('adm.html', noticias=noticias)
+        usuarios = User.query.order_by(User.id).all()
+        return render_template('adm.html', noticias=noticias, usuarios=usuarios)
     
     @app.route("/auth", methods=['GET', 'POST'])
     def auth():
