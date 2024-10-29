@@ -132,7 +132,7 @@ footer a img:hover{
 }
 
 #content{
-    padding: 125px 50px 0px 50px;
+    padding: 125px 10vw 0px 10vw;
     font-family: Afacad;
     font-size: 150%;
 }
@@ -183,5 +183,47 @@ figure{
 
 /* Aplica a animação ao hover */
 .top-button:hover {
-    animation: backgroundColorChange 1s forwards ease-in-out;
+    animation: backgroundColorChange 0.5s forwards ease-in-out;
+}
+
+#profile{
+    position: fixed;
+    right: 50px;
+    top: 100px;
+    width: 75px;
+    height: auto;
+    font-family: Afacad;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+#profile button{
+    overflow: hidden;
+    display: flex;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+#profile img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+#profile:hover img{
+    animation: opacity 0.2s forwards ease-in-out;
+}
+
+#profile h3{
+    margin-top: 0;
+    color: #333
 }

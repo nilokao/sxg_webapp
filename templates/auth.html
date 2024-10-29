@@ -29,7 +29,7 @@ SX Gaming - SignIn/SingUp
                 <span class="error-message"></span>
             </div>
             
-            <div class="input-group" id="password-check">
+            <div class="input-group" id="password-check" style="display: none;"> <!-- Aqui está o campo -->
                 <label for="password-check">Verifique sua senha</label>
                 <input type="password" name="password-check" placeholder="Digite novamente sua senha" required>
                 <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password-check')">👁️</button>
@@ -45,7 +45,7 @@ SX Gaming - SignIn/SingUp
             <button type="submit" class="submit-btn">Entrar</button>
         </form>
 
-        <button onclick="toggleAuthMode()" class="toggle-btn" id="toggle-btn">Registrar-se</button>
+        <button onclick="toggleAuthMode()" class="toggle-btn" id="toggle-btn">Não tem login? Registre-se</button>
     </div>
 </div>
 
