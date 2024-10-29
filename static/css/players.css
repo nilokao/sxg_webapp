@@ -133,3 +133,8 @@ footer{
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+#profile h3{
+    margin-top: 0;
+    color: #f9f9f9
+}

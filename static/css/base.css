@@ -190,22 +190,22 @@ figure{
     position: fixed;
     right: 50px;
     top: 100px;
-    width: 100px;
+    width: 75px;
     height: auto;
     font-family: Afacad;
     text-align: center;
     align-items: center;
     align-content: center;
     cursor: pointer;
-    font-size: 14px;
-    background-color: #f9f9f9;
+    font-size: 12px;
+    z-index: 1000;
 }
 
 #profile button{
     overflow: hidden;
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     background-color: transparent;
     border: none;
     border-radius: 50%;
@@ -225,4 +225,5 @@ figure{
 
 #profile h3{
     margin-top: 0;
+    color: #333
 }
