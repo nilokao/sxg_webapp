@@ -25,12 +25,18 @@
                 {% endif %}
 
                 {% else %}
-                <a href="/auth">Login/Registrar</a>
+                <a href="/auth">Login</a>
             {% endif %}
         
         </nav>
     </header>
 
+    {% if current_user.is_authenticated %}
+        <div id="profile">
+            <button><a href="/user"><img src="{{url_for('static', filename='media/img/jiks.png')}}"></a></button>
+            <h3>Nome do usuário</h3>
+        </div>
+    {% endif %}
 
     {% block content %}
     {% endblock %}
