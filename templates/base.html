@@ -14,15 +14,12 @@
     <header>
         <nav>
             <a href="/">Home</a>
-            <a href="/historia">Nossa História</a>
+            <a href="/historia">História</a>
             <a href="/players">Players</a>
             <a href="/noticias">Notícias</a>
         
             {% if current_user.is_authenticated %}
                 <a href="/logout">Logout</a>
-                {% if current_user.is_admin %}
-                    <a href="/adm">Administração</a>
-                {% endif %}
 
                 {% else %}
                 <a href="/auth">Login</a>
@@ -35,6 +32,9 @@
         <div id="profile">
             <button><a href="/user"><img src="{{url_for('static', filename='media/img/jiks.png')}}"></a></button>
             <h3>Nome do usuário</h3>
+            {% if current_user.is_admin %}
+                <a href="/adm" id="adm">Administração</a>
+            {% endif %}
         </div>
     {% endif %}
 

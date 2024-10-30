@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", function() {
         audio.play().catch(error => {
             console.log("O áudio não pôde ser reproduzido automaticamente:", error);
         });
-    }, 2000); // 2 segundos de delay (simulação)
+    }, 1500); // 2 segundos de delay (simulação)
 });

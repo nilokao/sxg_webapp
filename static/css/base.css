@@ -41,6 +41,7 @@ body{
 
 header{
     position: fixed;
+    height: 7vh;
     top: 0;
     width: 100%;
     background-color: #333;
@@ -60,11 +61,9 @@ header nav a{
 }
 
 header a{
-    /* font-size: 3vw; */
     font-size: 2vw;
     color: #f9f9f9;
     display: inline-block;
-    /* padding: 10px 50px 10px 50px; */
     padding: 5px, 15px;
     margin: 10px;
     font-weight: bolder;
@@ -190,7 +189,7 @@ figure{
     position: fixed;
     right: 50px;
     top: 100px;
-    width: 75px;
+    min-width: 75px;
     height: auto;
     font-family: Afacad;
     text-align: center;
@@ -202,6 +201,7 @@ figure{
 }
 
 #profile button{
+    margin-left: 15%;
     overflow: hidden;
     display: flex;
     width: 75px;
@@ -219,11 +219,20 @@ figure{
     height: auto;
 }
 
-#profile:hover img{
+#profile img:hover{
     animation: opacity 0.2s forwards ease-in-out;
 }
 
 #profile h3{
     margin-top: 0;
+    margin-bottom: 10px;
     color: #333
+}
+
+#adm{
+    font-size: 20px;
+}
+
+#adm:hover{
+    text-decoration: underline;
 }

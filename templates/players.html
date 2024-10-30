@@ -9,8 +9,15 @@ SX Gaming | Players
 {% endblock %}
 
 {% block content %} 
+
+<div id="loader" class="loader">
+    <div class="loader-inner">
+        <h1>Carregando...</h1>
+        <div class="spinner"></div>
+    </div>
+</div>
 <script src="{{ url_for('static', filename='js/players.js') }}"></script>
-<div id="loader" class="loader"></div>
+
 <audio id="audio" src="{{ url_for('static', filename='audio/whoosh-cinematic-161021.mp3') }}"></audio>
 
 <h1 class="title">LINE DE LEAGUE OF LEGENDS</h1>
