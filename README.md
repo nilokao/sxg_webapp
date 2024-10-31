@@ -19,11 +19,12 @@ cd ../sxg_webapp
 py -m venv venv
 ```
 3. Ative o *ambiente virtual*:
+##### Windows
 ```bash
-# Windows
 .\venv\Scripts\activate
-
-# Linux/MacOS (eu acho nao uso mac)
+```
+##### Linux/Mac
+```bash
 source venv/bin/activate
 ```
 4. Instale as dependências no *ambiente virtual*:
