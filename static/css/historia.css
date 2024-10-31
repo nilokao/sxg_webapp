@@ -13,50 +13,63 @@
     to{color: #ba252e;}
 }
 
-header {
-    width: 90vw;
-    margin-left: 10vw;
-}
-
+/* Navbar padrão */
 .navbar {
-    position: fixed;       /* Mantém a navbar fixa */
-    top: 0;               /* Posiciona no topo */
-    left: 0;              /* Posiciona à esquerda */
-    height: 100%;         /* Ocupa toda a altura da página */
-    width: 10vw;          /* Define uma largura específica */
-    background-color: #222; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3vw; /* Largura inicial da navbar */
+    background-color: #222;
     color: #f9f9f9;
-    padding-left: 1vw;
     padding-top: 10vh;
-    z-index: 1000;       
-    text-align: left;     /* Alinha o texto à esquerda */
+    z-index: 999;
+    transition: width 0.3s ease; /* Animação suave para expandir/recolher */
 }
 
 .navbar ul {
-    list-style-type: none; /* Remove a lista padrão */
-    padding: 0;           
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar li {
-    margin: 15px 0;       /* Espaçamento vertical entre os itens */
+    margin: 15px 0;
 }
 
 .navbar a {
     color: #f9f9f9;
-    font-family: Cocogoose;        
-    text-decoration: none; 
-    font-weight: bolder;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.navbar a:hover{
-    animation: fadeout 0.2s linear 1 normal forwards;
+/* Navbar expandida */
+.navbar-expanded {
+    width: 10vw; /* Largura da navbar quando expandida */
 }
+
+/* Estilos do Header */
+header {
+    transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+/* Estilos do Conteúdo */
+#content {
+    transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
+    margin-left: 3vw; /* Posição inicial do conteúdo */
+    padding: 2vw;
+}
+
+/* Deslocamento do Header e Conteúdo */
+.content-shifted {
+    margin-left: 10vw;
+    width: 90vw; /* Alinhado com a navbar expandida */
+}
+
 
 /* Estilo da div wrapper */
 #content {

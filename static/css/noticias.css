@@ -5,7 +5,7 @@
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -14,35 +14,38 @@ body{
     display: flex;
     max-width: 800px;
     min-height: 250px;
+    align-items: start;
+    align-content: end;
     background-color: white;
-    align-items: center;
-    justify-content: center;
     margin: 20px auto;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     flex-direction: row;    
 }
 
 .news:hover{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     transition: all 0.3s;
 }
 
 .image img{
-    margin-right: 20px;
     height: 250px;
-    width: 300px;
+    max-width: 400px; 
+    object-fit: cover; 
 }
 
 .newscontent{
-    max-width: 360px;
+    right: 0;
+    padding-left: 30px;
+    max-width: auto;
+    align-content: end;
 }
 
 .news h1{
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: Afacad, Arial, sans-serif;
 }
 
 .news h2{
@@ -56,9 +59,4 @@ body{
     font-size: 16px;
     color: #666;
     margin-bottom: 15px;
-    text-align: right;
-}
-
-h2{
-    font-family: Afacad;
 }

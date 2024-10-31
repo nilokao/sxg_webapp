@@ -45,3 +45,24 @@ document.addEventListener("DOMContentLoaded", function() {
         content.style.display = "block";
     }, 1500); // 2 segundos de delay (simulação)
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const header = document.querySelector('header');
+    const content = document.getElementById('content');
+
+// Expande a navbar ao passar o mouse
+    navbar.addEventListener('mouseenter', () => {
+        navbar.classList.add('navbar-expanded');
+        header.classList.add('content-shifted');
+        content.classList.add('content-shifted');
+    });
+
+    // Recolhe a navbar ao sair com o mouse
+    navbar.addEventListener('mouseleave', () => {
+        navbar.classList.remove('navbar-expanded');
+        header.classList.remove('content-shifted');
+        content.classList.remove('content-shifted');
+    });
+});
