@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
     const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
     const section = document.querySelectorAll("section");
     const links = document.querySelectorAll(".navbar-item");
     const content = document.getElementById("content");
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navbar.addEventListener('mouseenter', () => {
         navbar.classList.add('navbar-expanded');
         header.classList.add('content-shifted');
+        footer.classList.add('content-shifted');
         content.classList.add('content-shifted');
         content.style.marginLeft = "0vw";
         content.style.maxWidth = "100vw";
@@ -65,18 +67,27 @@ document.addEventListener('DOMContentLoaded', function () {
         section.forEach(section =>{
             section.classList.add("content-shifted");
         });
+
+        links.forEach(link =>{
+            link.style.display = "block";
+        });
     });
 
     // Recolhe a navbar ao sair com o mouse
     navbar.addEventListener('mouseleave', () => {
         navbar.classList.remove('navbar-expanded');
         header.classList.remove('content-shifted');
+        footer.classList.remove('content-shifted');
         content.classList.remove('content-shifted');
         content.style.marginLeft = "3vw";
         content.style.maxWidth = "97vw";
 
         section.forEach(section =>{
             section.classList.remove("content-shifted");
+        });
+        
+        links.forEach(link =>{
+            link.style.display = "none";
         });
     });
 });

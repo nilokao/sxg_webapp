@@ -46,8 +46,9 @@ body{
     font-family: Afacad;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: none;
+    text-align: center;
 }
 
 .navbar a:hover{
@@ -62,8 +63,12 @@ body{
 /* Estilos do Header */
 header {
     transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
-    background-color: #333;
-    color: #f9f9f9;
+}
+
+footer{
+    transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
+    z-index: 1000;
+    max-width: 100%;
 }
 
 /* Estilos do Conteúdo */
