@@ -33,8 +33,8 @@ SX Gaming | Admin Page
 
     <div class="select-option">
         <div id="change-opt" class="button-container">
-            <button class="button-6" style="flex: 1;" id="noticias-btn">Notícias</button>
-            <button class="button-6" style="flex: 1;" id="usuarios-btn">Usuários</button>
+            <button class="button-6" style="flex: 1; background-color: #F0F0F1; color: black;" id="noticias-btn">Notícias</button>
+            <button class="button-6" style="flex: 1; background-color: #F0F0F1; color: black;" id="usuarios-btn">Usuários</button>
         </div>
         
         <div id="all-news" class="all-news">
@@ -61,7 +61,11 @@ SX Gaming | Admin Page
                         <h1 id="username">Usuario: {{ user.username }}</h1>
                         <input type="checkbox" id="adm-{{ user.id }}" name="adm" style="margin-left: 10px;" {% if user.is_admin %}checked{% endif %} {% if user.id == 1 or user.id == 2 %}disabled{% endif %}>
                         <h1 style="margin-right: 10px; font-size: 16px;"">Admin</h1>
-                        <button data-id="{{ user.id }}" class="button-6 remove-btn" >Remover</button>
+                        <button data-id="{{ user.id }}" class="button-6 remove-btn" 
+                        style="background-color: {% if user.id == 1 or user.id == 2 %} #ccc {% else %} #ba252e {% endif %};"
+                        {% if user.id == 1 or user.id == 2 %} disabled {% endif %}>
+                        Remover
+                        </button>
                     </div>
                 </li>
                 {% endfor %}

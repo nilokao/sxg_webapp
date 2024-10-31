@@ -96,11 +96,11 @@ textarea {
 }
 .button-6{
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #ba252e;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.85);
+    color: white;
     cursor: pointer;
     display: inline-flex;
     font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -121,9 +121,9 @@ textarea {
     width: auto;
 }
 .button-6:hover, .button-6:focus {
-    border-color: rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(255, 255, 255, 0.8);
 }
 .button-6:hover {
     transform: translateY(-1px);

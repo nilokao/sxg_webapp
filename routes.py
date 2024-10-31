@@ -130,6 +130,9 @@ def register_routes(app, db, login_manager):
     @login_required
     @admin_required
     def remove_user(user_id):
+        if user_id in [1, 2]:
+            return "Usuário não pode ser removido", 403 
+
         user = User.query.get(user_id)
         if user:
             db.session.delete(user)
