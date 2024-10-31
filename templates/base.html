@@ -31,7 +31,7 @@
     {% if current_user.is_authenticated %}
         <div id="profile">
             <button><a href="/user"><img src="{{ current_user.profile_pic }}"></a></button>
-            <h3>Nome do usuário</h3>
+            <h3>{{ current_user.username }}</h3>
             {% if current_user.is_admin %}
                 <a href="/adm" id="adm">Administração</a>
             {% endif %}
