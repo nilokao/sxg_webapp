@@ -96,6 +96,7 @@ def register_routes(app, db, login_manager):
 
     @app.route("/add_noticia", methods=['GET', 'POST'])
     @login_required
+    @admin_required
     def add_noticia():
         if request.method == 'POST':
             title = request.form['titulo']
@@ -114,11 +115,40 @@ def register_routes(app, db, login_manager):
 
         return render_template('adm.html')
 
+    @app.route("/remover_noticias/<int:item_id>", methods=['DELETE'])
+    @login_required
+    @admin_required
+    def remove_news(item_id):
+        noticia = News.query.get(item_id)
+        if noticia:
+            db.session.delete(noticia)
+            db.session.commit()
+            return "Notícia removida com sucesso"
+        return "Noticia nao encontrada", 404
+    
+    @app.route("/remover_usuarios/<int:user_id>", methods=['DELETE'])
+    @login_required
+    @admin_required
+    def remove_user(user_id):
+        user = User.query.get(user_id)
+        if user:
+            db.session.delete(user)
+            db.session.commit()
+            return "Usuario removida com sucesso"
+        return "Usuario nao encontrado", 404
+
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
 
-    #cria páginas para cada usuário
-    #@app.route("/user/<username>")
-    #def users(username):
-    #    return render_template("users.html", username=username)
+    @app.route("/atualizar_usuario/<int:user_id>", methods=['POST'])
+    @login_required
+    @admin_required
+    def atualizar_usuario(user_id):
+        user = User.query.get(user_id)
+        if user:
+            data = request.get_json()
+            user.is_admin = data['is_admin'] 
+            db.session.commit()
+            return "Usuário atualizado com sucesso"
+        return "Usuário não encontrado", 404
