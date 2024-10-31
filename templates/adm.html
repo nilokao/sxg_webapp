@@ -32,19 +32,19 @@ SX Gaming | Admin Page
     </div>
 
     <div class="select-option">
-        <div>
-            <button class="button-6" id="noticias-btn">Notícias</button>
-            <button class="button-6" id="usuarios-btn">Usuários</button>
+        <div id="change-opt" class="button-container">
+            <button class="button-6" style="flex: 1;" id="noticias-btn">Notícias</button>
+            <button class="button-6" style="flex: 1;" id="usuarios-btn">Usuários</button>
         </div>
         
-        <div class="all-news">
+        <div id="all-news" class="all-news">
             <div class="list-news">
                 {% for noticia in noticias %}
                 <li style="list-style: none;">
                     <div class="news">
                         <img class="image" src="{{ noticia.image_link }}">
                         <p id="data"><small>{{ noticia.date_published.strftime('%d/%m/%Y') }}</small></p>
-                        <h3 id="titulo">{{ noticia.title }}</h3>
+                        <h3 style="margin-left: 15px;" id="titulo">{{ noticia.title }}</h3>
                         <button class="button-6" >Remover</button>
                     </div>
                 </li>
@@ -52,24 +52,44 @@ SX Gaming | Admin Page
             </div>
         </div>
 
-        <div class="all-users">
+        <div id="all-users" class="all-users" style="display: none;">
             <div class="list-users">
-                {% for user in users %}
+                {% for user in usuarios %}
                 <li style="list-style: none;">
-                    <div class="user">
-                        <!-- <img class="image" src="{{ user.profile_pic }}"> -->
-                        <p id="id">{{ user.id }}</p>
-                        <p id="username">{{ user.username }}</p>
+                    <div class="users">
+                        <img class="image" style="border-radius: 50%;" src="{{ user.profile_pic }}">
+                        <h1 id="username">Usuario: {{ user.username }}</h1>
+                        <input type="checkbox" id="adm" name="adm" style="margin-left: 10px;">
+                        <h1 id="username" style="margin-right: 10px;"">Admin</h1>
                         <button class="button-6" >Remover</button>
                     </div>
                 </li>
                 {% endfor %}
-            </div>
         </div>
+    </div>
 
     </div>
 
 
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const news = document.getElementById("noticias-btn");
+    const users = document.getElementById("usuarios-btn");
+    const noticias_div = document.getElementById("all-news");
+    const usuarios_div = document.getElementById("all-users");
+
+    news.addEventListener("click", function() {
+        noticias_div.style.display = "block";  
+        usuarios_div.style.display = "none";   
+    });
+
+    users.addEventListener("click", function() {
+        usuarios_div.style.display = "block";   
+        noticias_div.style.display = "none";   
+    });
+});
+</script>
 
 {% endblock %}

@@ -4,7 +4,7 @@ function toggleAuthMode() {
     const submitBtn = document.querySelector('.submit-btn');
     const toggleBtn = document.getElementById('toggle-btn');
     const emailField = document.getElementById('email-field');
-    const checkPassword = document.getElementById('password-check'); // Obtenha a referência do campo de verificação de senha
+    const checkPassword = document.getElementById('password-check'); 
     const emailInput = emailField.querySelector('input[name="email"]');
 
     // Limpa mensagens de erro
@@ -16,19 +16,19 @@ function toggleAuthMode() {
         authTitle.textContent = 'Registrar';
         submitBtn.textContent = 'Registrar';
         toggleBtn.textContent = 'Login';
-        emailField.style.display = 'block';         // Exibir campo de email
-        checkPassword.style.display = 'block';      // Exibir campo de verificação de senha
-        emailInput.required = true;                 // Campo de email agora é obrigatório
-        checkPassword.required = true;                 // Campo de verificar senha agora é obrigatório
+        emailField.style.display = 'block';       
+        checkPassword.style.display = 'block';   
+        emailInput.required = true;                 
+        checkPassword.required = true;           
     } else {
         authAction.value = 'login';
         authTitle.textContent = 'Login';
         submitBtn.textContent = 'Entrar';
         toggleBtn.textContent = 'Registrar-se';
-        emailField.style.display = 'none';          // Ocultar campo de email
-        checkPassword.style.display = 'none';       // Ocultar campo de verificação de senha
-        emailInput.required = false;                // Campo de email não é mais obrigatório
-        checkPassword.required = false;                // Campo de verificar senha não é mais obrigatório
+        emailField.style.display = 'none';         
+        checkPassword.style.display = 'none';     
+        emailInput.required = false;             
+        checkPassword.required = false;              
     }
 }
 
