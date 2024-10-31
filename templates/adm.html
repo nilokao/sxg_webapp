@@ -32,44 +32,121 @@ SX Gaming | Admin Page
     </div>
 
     <div class="select-option">
-        <div>
-            <button class="button-6" id="noticias-btn">Notícias</button>
-            <button class="button-6" id="usuarios-btn">Usuários</button>
+        <div id="change-opt" class="button-container">
+            <button class="button-6" style="flex: 1; background-color: #F0F0F1; color: black;" id="noticias-btn">Notícias</button>
+            <button class="button-6" style="flex: 1; background-color: #F0F0F1; color: black;" id="usuarios-btn">Usuários</button>
         </div>
         
-        <div class="all-news">
+        <div id="all-news" class="all-news">
             <div class="list-news">
                 {% for noticia in noticias %}
                 <li style="list-style: none;">
                     <div class="news">
                         <img class="image" src="{{ noticia.image_link }}">
                         <p id="data"><small>{{ noticia.date_published.strftime('%d/%m/%Y') }}</small></p>
-                        <h3 id="titulo">{{ noticia.title }}</h3>
-                        <button class="button-6" >Remover</button>
+                        <h3 style="margin-left: 15px;" id="titulo">{{ noticia.title }}</h3>
+                        <button data-id="{{ noticia.id }}" class="button-6 remove-btn" >Remover</button>
                     </div>
                 </li>
             {% endfor %}
             </div>
         </div>
 
-        <div class="all-users">
+        <div id="all-users" class="all-users" style="display: none;">
             <div class="list-users">
-                {% for user in users %}
+                {% for user in usuarios %}
                 <li style="list-style: none;">
-                    <div class="user">
-                        <!-- <img class="image" src="{{ user.profile_pic }}"> -->
-                        <p id="id">{{ user.id }}</p>
-                        <p id="username">{{ user.username }}</p>
-                        <button class="button-6" >Remover</button>
+                    <div class="users"">
+                        <img class="image" style="border-radius: 50%;" src="{{ user.profile_pic }}">
+                        <h1 id="username">Usuario: {{ user.username }}</h1>
+                        <input type="checkbox" id="adm-{{ user.id }}" name="adm" style="margin-left: 10px;" {% if user.is_admin %}checked{% endif %} {% if user.id == 1 or user.id == 2 %}disabled{% endif %}>
+                        <h1 style="margin-right: 10px; font-size: 16px;"">Admin</h1>
+                        <button data-id="{{ user.id }}" class="button-6 remove-btn" 
+                        style="background-color: {% if user.id == 1 or user.id == 2 %} #ccc {% else %} #ba252e {% endif %};"
+                        {% if user.id == 1 or user.id == 2 %} disabled {% endif %}>
+                        Remover
+                        </button>
                     </div>
                 </li>
                 {% endfor %}
-            </div>
         </div>
+    </div>
 
     </div>
 
 
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const news = document.getElementById("noticias-btn");
+        const users = document.getElementById("usuarios-btn");
+        const noticias_div = document.getElementById("all-news");
+        const usuarios_div = document.getElementById("all-users");
+        const checkboxes = document.querySelectorAll("input[type='checkbox'][id^='adm-']"); // Corrigido aqui
+    
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", function() {
+                const userId = this.id.split('-')[1]; 
+                const isAdmin = this.checked; 
+    
+                fetch(`/atualizar_usuario/${userId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ is_admin: isAdmin })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        alert("Erro ao atualizar o usuário.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro:", error);
+                });
+            });
+        });
+    
+        news.addEventListener("click", function() {
+            noticias_div.style.display = "block";  
+            usuarios_div.style.display = "none";   
+        });
+    
+        users.addEventListener("click", function() {
+            usuarios_div.style.display = "block";   
+            noticias_div.style.display = "none";   
+        });
+    
+        const removeButtons = document.querySelectorAll(".remove-btn");
+    
+        removeButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const itemId = this.getAttribute("data-id");
+                const confirmation = confirm("Você tem certeza que deseja remover este item?");
+                if (confirmation) {
+                    const isUserButton = this.closest('.users') !== null;
+                    const url = isUserButton ? `/remover_usuarios/${itemId}` : `/remover_noticias/${itemId}`;
+    
+                    fetch(url, {
+                        method: 'DELETE'
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            this.closest('li').remove();
+                        } else {
+                            alert("Erro ao remover o item.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Erro:", error);
+                    });
+                }
+            });
+        });
+    });
+    </script>
+    
+
 
 {% endblock %}
