@@ -22,7 +22,7 @@ function revealOnScroll() {
     
     elements.forEach((element) => {
         const elementTop = element.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 250) {
+        if (elementTop < windowHeight - 200) {
             element.classList.add('appear');
         }
     });
@@ -50,13 +50,21 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
     const header = document.querySelector('header');
-    const content = document.getElementById('content');
+    const section = document.querySelectorAll("section");
+    const links = document.querySelectorAll(".navbar-item");
+    const content = document.getElementById("content");
 
 // Expande a navbar ao passar o mouse
     navbar.addEventListener('mouseenter', () => {
         navbar.classList.add('navbar-expanded');
         header.classList.add('content-shifted');
         content.classList.add('content-shifted');
+        content.style.marginLeft = "0vw";
+        content.style.maxWidth = "100vw";
+
+        section.forEach(section =>{
+            section.classList.add("content-shifted");
+        });
     });
 
     // Recolhe a navbar ao sair com o mouse
@@ -64,5 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
         navbar.classList.remove('navbar-expanded');
         header.classList.remove('content-shifted');
         content.classList.remove('content-shifted');
+        content.style.marginLeft = "3vw";
+        content.style.maxWidth = "97vw";
+
+        section.forEach(section =>{
+            section.classList.remove("content-shifted");
+        });
     });
 });

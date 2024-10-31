@@ -56,11 +56,11 @@ SX Gaming | Admin Page
             <div class="list-users">
                 {% for user in usuarios %}
                 <li style="list-style: none;">
-                    <div class="users"">
+                    <div class="users">
                         <img class="image" style="border-radius: 50%;" src="{{ user.profile_pic }}">
                         <h1 id="username">Usuario: {{ user.username }}</h1>
                         <input type="checkbox" id="adm-{{ user.id }}" name="adm" style="margin-left: 10px;" {% if user.is_admin %}checked{% endif %} {% if user.id == 1 or user.id == 2 %}disabled{% endif %}>
-                        <h1 style="margin-right: 10px; font-size: 16px;"">Admin</h1>
+                        <h1 style="margin-right: 10px; font-size: 16px;">Admin</h1>
                         <button data-id="{{ user.id }}" class="button-6 remove-btn" 
                         style="background-color: {% if user.id == 1 or user.id == 2 %} #ccc {% else %} #ba252e {% endif %};"
                         {% if user.id == 1 or user.id == 2 %} disabled {% endif %}>
