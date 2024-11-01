@@ -68,7 +68,7 @@ header {
 footer{
     transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
     z-index: 1000;
-    max-width: 100%;
+    width: auto;
 }
 
 /* Estilos do Conteúdo */

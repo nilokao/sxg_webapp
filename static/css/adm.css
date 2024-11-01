@@ -2,98 +2,111 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
+
 #content{
     display: flex;
+    justify-content: center;
 }
+
 .form-container {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background: #fff;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     min-width: 400px;
     max-height: 580px;
 }
+
 h1 {
     text-align: center;
     color: #333;
 }
+
 label {
     display: block;
     margin-top: 15px;
     color: #555;
 }
+
 input[type="text"], textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #bbb;
     box-sizing: border-box;
 }
+
 textarea {
     resize: none;
 }
+
 .form-container button {
     background-color: #ba252e;
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 4px;
     cursor: pointer;
     margin-top: 20px;
     width: 100%;
     font-size: 16px;
 }
+
 .form-container button:hover {
     background-color: #ba252fbe;
 }
+
 .news, .users{
     display: flex;
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
+
 .news .button-6, .users .button-6 {
     margin-left: auto;
 }
+
 .image{
     height: 50px;
     width: 50px;
     margin-right: 10px;
 }
+
 .select-option{
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-left: 20px;
+    background-color: #fff;
+    margin-left: 1vw;
     padding: 10px;
     padding-bottom: 20px;
     padding-top: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-height: 580px;
 }
+
 .button-container{
     display: flex;
     margin-bottom: 10px;
 }
+
 .all-news, .all-users{
     width: 100%;
     overflow-y: auto;
     max-height: 580px;
 }
+
 .all-news #titulo, #data, #resumo, .all-users #titulo, #data, #resumo{
     margin: 0;
 }
+
 .all-news #titulo{
     font-size: 24px;
 }
+
 .all-users #username{
     font-size: 16px;
 }
+
 .button-6{
     align-items: center;
     background-color: #ba252e;
@@ -120,14 +133,17 @@ textarea {
     vertical-align: baseline;
     width: auto;
 }
+
 .button-6:hover, .button-6:focus {
     border-color: rgba(255, 255, 255, 0.15);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .button-6:hover {
     transform: translateY(-1px);
 }
+
 .button-6:active {
     background-color: #F0F0F1;
     border-color: rgba(0, 0, 0, 0.15);
@@ -135,3 +151,4 @@ textarea {
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
 }
+

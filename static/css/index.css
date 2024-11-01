@@ -3,6 +3,15 @@
     src: url("../fonts/Showdex.ttf");
 }
 
+@keyframes rotationY {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+}
+
 .showdex{
     display: flex;
     align-items: center;
@@ -21,12 +30,7 @@
 
 #samuraisxg{
     max-height: 300px;
-    transform: rotateY(0deg) rotate(0deg);
-    transition: transform  1.5s;
-}
-
-#samuraisxg:hover{
-    transform: rotateY(180deg) rotate(0deg);
+    animation: rotationY 6s infinite linear;
 }
 
 #lastnews {
