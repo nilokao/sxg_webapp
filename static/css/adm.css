@@ -152,3 +152,12 @@ textarea {
     transform: translateY(0);
 }
 
+input:focus {
+    outline: none;
+    border-color: #ba252e;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ba252e;
+}

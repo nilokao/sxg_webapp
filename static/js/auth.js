@@ -15,7 +15,7 @@ function toggleAuthMode() {
         authAction.value = 'register';
         authTitle.textContent = 'Registrar';
         submitBtn.textContent = 'Registrar';
-        toggleBtn.textContent = 'Login';
+        toggleBtn.textContent = 'Voltar para a tela de login';
         emailField.style.display = 'block';       
         checkPassword.style.display = 'block';   
         emailInput.required = true;                 
@@ -24,7 +24,7 @@ function toggleAuthMode() {
         authAction.value = 'login';
         authTitle.textContent = 'Login';
         submitBtn.textContent = 'Entrar';
-        toggleBtn.textContent = 'Registrar-se';
+        toggleBtn.textContent = 'Não tem login? Registre-se';
         emailField.style.display = 'none';         
         checkPassword.style.display = 'none';     
         emailInput.required = false;             
