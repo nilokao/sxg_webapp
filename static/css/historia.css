@@ -13,6 +13,10 @@
     to{color: #ba252e;}
 }
 
+body{
+    background-color: #111;
+}
+
 /* Navbar padrão */
 .navbar {
     position: fixed;
@@ -39,10 +43,16 @@
 
 .navbar a {
     color: #f9f9f9;
-    font-family: Arial, sans-serif;
+    font-family: Afacad;
     font-weight: bold;
     text-decoration: none;
     font-size: 1rem;
+    display: none;
+    text-align: center;
+}
+
+.navbar a:hover{
+    animation: fadeout 0.2s linear 1 normal forwards;
 }
 
 /* Navbar expandida */
@@ -53,32 +63,37 @@
 /* Estilos do Header */
 header {
     transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
-    background-color: #333;
-    color: #f9f9f9;
+}
+
+footer{
+    transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
+    z-index: 1000;
+    width: auto;
 }
 
 /* Estilos do Conteúdo */
 #content {
     transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
-    margin-left: 3vw; /* Posição inicial do conteúdo */
-    padding: 2vw;
+    padding: 45px 0 0 0;
+    margin-left: 3vw;
+    max-width: 97vw;
+    padding-bottom: 50px;
 }
 
 /* Deslocamento do Header e Conteúdo */
 .content-shifted {
     margin-left: 10vw;
-    width: 90vw; /* Alinhado com a navbar expandida */
-}
-
-
-/* Estilo da div wrapper */
-#content {
-    padding-bottom: 50px;
+    max-width: 90vw; /* Alinhado com a navbar expandida */
 }
 
 /* Estilo das seções */
 .section {
-    padding: 80px 50px;
+    transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
+    max-width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 3vw;
+    padding-right: 3vw;
     color: #f9f9f9;
 }
 
@@ -94,10 +109,10 @@ header {
     background-color: #333;
 }
 .bg-4 {
-    background: url('https://i.pinimg.com/736x/0a/55/13/0a5513a2de0858cac949602e02de7dbc.jpg') center center / cover no-repeat;
+    background-color: #444;
 }
 .bg-5 {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW_zRAPzHn9JvkzyA4aG-P3QowpYtsd2GZyA&s') center center / cover no-repeat; /* Substitua pela imagem desejada */
+    background-color: #555;
 }
 
 /* Animações de rolagem */
@@ -185,4 +200,9 @@ html{
 
 figure img {
     max-height: 200px;
+}
+
+body{
+    padding: 0px;
+    margin: 0;
 }

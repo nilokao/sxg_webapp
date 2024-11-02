@@ -10,22 +10,22 @@ SX Gaming | Nossa História
 
 {% block content %}
 <body id="top">
-    <!-- <div id="loader" class="loader">
+    <div id="loader" class="loader">
         <div class="loader-inner">
             <h1>Carregando...</h1>
             <div class="spinner"></div>
         </div>
-    </div> -->
+    </div>
 
     <script src="{{url_for('static', filename='js/history.js')}}"></script>
     
     <!-- Navbar Lateral -->
     <nav class="navbar">
         <ul>
-            <li><a href="#comeco">O Começo</a></li>
-            <li><a href="#novocomeco">Um Novo Começo</a></li>
-            <li><a href="#rocketleague">Rocket League</a></li>
-            <li><a href="#historias">Poemas & Histórias</a></li>
+            <li><a class="navbar-item" href="#comeco">O Começo</a></li>
+            <li><a class="navbar-item" href="#novocomeco">Um Novo Começo</a></li>
+            <li><a class="navbar-item" href="#rocketleague">Rocket League</a></li>
+            <li><a class="navbar-item" href="#historias">Poemas & Histórias</a></li>
         </ul>
     </nav>
 
@@ -66,24 +66,27 @@ SX Gaming | Nossa História
             <div class="image-group fade-in">
                 <figure>
                     <img src="{{url_for('static', filename='media/img/postprocurasxg.png')}}" alt="Post Procurando">
-                    <figcaption>Anúncio buscando o 5º player.</figcaption>
+                    <figcaption>Anúncio buscando o 5º player para a lineup.</figcaption>
                 </figure>
                 <figure>
                     <img src="{{url_for('static', filename='media/img/cbolaojpg.jpg')}}" alt="CBOLÃO">
-                    <figcaption>CBOLÃO.</figcaption>
+                    <figcaption>Logo do CBOLÃO, promovido pelo Ilha das Lendas.</figcaption>
                 </figure>
             </div>
-            <div class="embed-tiktok fade-in">
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sxgesports/video/7221977637743267077" data-video-id="7221977637743267077" style="max-width: 605px; min-width: 325px;">
-                    <!-- Conteúdo do TikTok -->
-                </blockquote>
+            <h2 style="text-align: center;">Exódia Banana da SXG:</h2>
+            <div class="image-group fade-in" style="display:flex; justify-content: center;">
+                <img src="{{url_for('static', filename='media/img/obrigado.png')}}" alt="Exódia Banana" style="max-width: 50vw;">
             </div>
+            <p style="text-align: right;">O adeus.</p>
         </section>
 
         <!-- Seção Rocket League -->
         <section id="rocketleague" class="section bg-3">
             <h2 class="fade-in" class="fade-out">Rocket League</h2>
             <div class="fade-in" class="fade-out">
+                <p class="fade-in" class="fade-out">
+                    &emsp;&emsp;Com o afastamento do time após a tragédia do CBOLÃO, instaurou-se assim uma nova era. Com uma line up composta por gus o trem e IMBACK (Lazorp), o time de Rocket League foi formado, além disso, El Coach Kekko comandava a equipe, e juntos disputavam quase que diariamente o torneio 2v2 Soccar, que era promovido pelo próprio jogo.
+                </p>
             </div>
         </section>
 
