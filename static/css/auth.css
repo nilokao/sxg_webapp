@@ -3,23 +3,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    align-content: center;
-    min-height: 100vh;
     background-color: #f9f9f9;
     margin: 0;
 }
 
 #content{
-    align-items: center;
-    justify-content: center;
     align-content: center;
+    min-width: 400px;
+    width: auto;
     padding-left: 0;
+    padding-right: 0;
 }
 
 .auth-container {
-    width: 100%;
     min-width: 400px;
-    max-width: 600px;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
