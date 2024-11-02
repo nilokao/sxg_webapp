@@ -23,6 +23,8 @@ SX Gaming | Notícias
                         <h1>{{ noticia.title }}</h1>
                         <h3><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></h3>
                         <h2>{{ noticia.resume }}</h2>
+                        <img src="{{ noticia.author.profile_pic }}" alt="" class="author-pfp">
+                        <p class="author-name"><small>{{ noticia.author.username }}</small></p>
                     </div>
                     
                 </div>
