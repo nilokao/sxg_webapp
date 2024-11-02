@@ -60,3 +60,10 @@ body{
     color: #666;
     margin-bottom: 15px;
 }
+
+/* fiz essa merda aqui  */
+.author-pfp{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}

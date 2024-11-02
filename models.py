@@ -8,7 +8,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(150), nullable=False, unique=True)
     email = db.Column(db.String(150), nullable=False, unique=True)
     password = db.Column(db.String(150), nullable=False)
-    profile_pic = db.Column(db.String(150), nullable=True)
+    profile_pic = db.Column(db.Text, nullable=True)
     is_admin = db.Column(db.Boolean, default=False)
 
     news = db.relationship('News', backref='author', lazy=True)
