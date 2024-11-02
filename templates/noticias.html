@@ -9,27 +9,40 @@ SX Gaming | Notícias
 {% endblock %}
 
 {% block content %} 
+    <script src="{{ url_for('static', filename='js/news.js')}}"></script>
 
     <div id="content">
         {% for noticia in noticias %}
-            <li style="list-style: none;">
-                <div class="news">
-
-                    <div class="image">
-                        <img src="{{ noticia.image_link }}" alt="{{ noticia.titulo }}">
-                    </div>
-                    
-                    <div class="newscontent">
-                        <h1>{{ noticia.title }}</h1>
-                        <h3><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></h3>
-                        <h2>{{ noticia.resume }}</h2>
-                        <img src="{{ noticia.author.profile_pic }}" alt="" class="author-pfp">
-                        <p class="author-name"><small>{{ noticia.author.username }}</small></p>
-                    </div>
-                    
+        <li style="list-style: none;">
+            <div class="news" onclick="openModal('{{ noticia.title }}', '{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}', '{{ noticia.resume }}', '{{ noticia.image_link }}', '{{ noticia.author.profile_pic }}', '{{ noticia.author.username }}')">
+                <div class="image">
+                    <img src="{{ noticia.image_link }}" alt="{{ noticia.title }}">
                 </div>
-            </li>
+                <div class="newscontent">
+                    <h1>{{ noticia.title }}</h1>
+                    <h3><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></h3>
+                    <h2>{{ noticia.resume }}</h2>
+                    <img src="{{ noticia.author.profile_pic }}" alt="" class="author-pfp">
+                    <p class="author-name"><small>{{ noticia.author.username }}</small></p>
+                </div>
+            </div>
+        </li>
         {% endfor %}
+    </div>
+    
+    <!-- Modal Estrutura -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <h1 id="modalTitle"></h1>
+                <h3><small id="modalDate"></small></h3>
+                <img id="modalImage" src="" alt="" style="width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px;">
+                <h2 id="modalResume"></h2>
+                <img id="modalAuthorPic" src="" alt="" class="author-pfp" style="width: 40px; height: 40px; border-radius: 50%; margin-top: 10px;">
+                <p class="author-name"><small id="modalAuthor"></small></p>
+            </div>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/base.js')}}"></script>

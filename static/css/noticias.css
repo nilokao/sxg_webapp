@@ -67,3 +67,69 @@ body{
     height: 50px;
     width: 50px;
 }
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #ba252e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body img {
+    display: block;
+    margin: 15px auto;
+}
+
+.modal h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Afacad";
+}
+
+.modal h2{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: justify;
+    font-family: "Afacad";
+}
+
+.modal h3{
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: "Afacad";
+}
