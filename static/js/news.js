@@ -1,12 +1,16 @@
 // Função para abrir o modal com os detalhes da notícia
-function openModal(title, date, resume, image, authorPic, authorName) {
+function openModal(title, date, resume, article, image, authorPic, authorName) {
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalDate").innerText = date;
     document.getElementById("modalResume").innerText = resume;
+    
+    document.getElementById("modalArticle").innerText = article;
+
     document.getElementById("modalImage").src = image;
     document.getElementById("modalAuthorPic").src = authorPic;
     document.getElementById("modalAuthor").innerText = authorName;
     
+
     // Mostrar o modal
     document.getElementById("newsModal").style.display = "flex";
 }
