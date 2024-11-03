@@ -25,9 +25,11 @@ SX Gaming | Notícias
                     <h1>{{ noticia.title }}</h1>
                     <h3><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></h3>
                     <h2>{{ noticia.resume }}</h2>
+                </div>
+                <div class="author">
                     <img src="{{ noticia.author.profile_pic }}" alt="" class="author-pfp">
                     <p class="author-name"><small>{{ noticia.author.username }}</small></p>
-                </div>
+                </div1>
             </div>
         </li>
         {% endfor %}
@@ -40,11 +42,14 @@ SX Gaming | Notícias
             <div class="modal-body">
                 <h1 id="modalTitle"></h1>
                 <h3><small id="modalDate"></small></h3>
-                <img id="modalImage" src="" alt="" style="width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px;">
+                <img id="modalImage" src="" alt="Imagem autor" style="width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px;">
                 <h2 id="modalResume"></h2>
-                <h2 id="modalArticle"></h2>
-                <img id="modalAuthorPic" src="" alt="" class="author-pfp" style="width: 40px; height: 40px; border-radius: 50%; margin-top: 10px;">
-                <p class="author-name"><small id="modalAuthor"></small></p>
+                <p id="modalArticle" style="font-family: Afacad;"></p>
+                <p style="font-family: Afacad; text-align: right; margin-top: 10px; margin-bottom: -10px;">Autor:</p>
+                <div id="authorModal">
+                    <img id="modalAuthorPic" src="" alt="" class="author-pfp" style="width: 30px; height: 30px; border-radius: 50%; margin-top: 20px;  margin-right: 10px;">
+                    <p class="author-name"><small id="modalAuthor"></small></p>
+                </div>
             </div>
         </div>
     </div>

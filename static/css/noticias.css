@@ -20,7 +20,6 @@ body{
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
     flex-direction: row;    
 }
 
@@ -28,6 +27,7 @@ body{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .image img{
@@ -64,8 +64,20 @@ body{
 /* fiz essa merda aqui  */
 .author-pfp{
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+.author{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    right: 0;
+    margin-left: auto;
+    bottom: 0;
+    margin-top: auto;
 }
 
 /* Estilo para o modal */
@@ -86,7 +98,6 @@ body{
 .modal-content {
     background-color: #fefefe;
     padding: 20px;
-    border-radius: 8px;
     width: 90%;
     max-width: 600px;
     position: relative;
@@ -108,7 +119,7 @@ body{
     cursor: pointer;
 }
 
-.modal-body img {
+#modalImage {
     display: block;
     margin: 15px auto;
 }
@@ -132,4 +143,11 @@ body{
     color: #666;
     margin-bottom: 15px;
     font-family: "Afacad";
+}
+
+#authorModal{
+    font-family: Afacad;
+    font-size: large;
+    display: flex;
+    justify-content: right;
 }
