@@ -155,3 +155,7 @@ def register_routes(app, db, login_manager):
             db.session.commit()
             return "Usuário atualizado com sucesso"
         return "Usuário não encontrado", 404
+    
+    @app.route("/bet")
+    def bet():
+        return render_template('bet.html')

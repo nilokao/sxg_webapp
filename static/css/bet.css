@@ -1,0 +1,79 @@
+/* default configs */
+@font-face{
+    font-family: "Afacad";
+    src: url("../fonts/AfacadFlux-VariableFont_slnt\,wght.ttf");
+}
+@font-face{
+    font-family: "Cocogoose";
+    src: url("../fonts/Cocogoose-Pro-Regular-trial.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-body{
+    display: flex;
+}
+
+/* header */
+header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+header h1{
+    font-family: Cocogoose;
+    margin-left: 50px;
+    padding: 10px;
+    user-select: none;
+}
+header ul{
+    font-family: Afacad;
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+header ul li{
+    padding-left: 25px;
+    padding-right: 25px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+header ul li:hover{
+    background-color: rgb(230, 230, 230, 0.25);
+    cursor: pointer;
+    border-bottom: 3px solid #ccc;
+}
+
+/* side content */
+.side-content{
+    background-color: #ccc;
+    width: 400px;
+    height: 100vh;
+}
+
+/* center-content */
+.center-content{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
+/* popular-content */
+.popular-content{
+    width: 100%;
+    height: 300px;
+    padding: 25px;
+    margin-top: 100px;
+    margin-left: 45px;
+    background-color: aqua;
+}
+.popular{
+    width: 300px;
+    height: 250px;
+    background-color: black;
+}
