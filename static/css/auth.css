@@ -1,4 +1,4 @@
-/* Centralizar o container principal */
+/* default configs */
 body {
     display: flex;
     align-items: center;
@@ -6,7 +6,11 @@ body {
     background-color: #f9f9f9;
     margin: 0;
 }
-
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
 #content{
     align-content: center;
     min-width: 400px;
@@ -15,6 +19,7 @@ body {
     padding-right: 0;
 }
 
+/* formulario de autenticação */
 .auth-container {
     min-width: 400px;
     padding: 20px;
@@ -23,11 +28,6 @@ body {
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
 
 /* Estilo dos campos de entrada */
 .input-group {
@@ -35,14 +35,12 @@ h2 {
     position: relative;
     margin-bottom: 15px;
 }
-
 .input-group label {
     font-size: 14px;
     color: #333;
     margin-bottom: 5px;
     display: block;
 }
-
 .input-group input {
     width: 100%;
     padding: 10px;
@@ -50,13 +48,12 @@ h2 {
     border: 1px solid #666;
     box-sizing: border-box;
 }
-
 .input-group input:focus {
     outline: none;
     border-color: #ba252e;
 }
 
-/* Botão de submissão */
+/* botão de envio */
 .submit-btn, .toggle-btn {
     width: 100%;
     padding: 10px;
@@ -64,35 +61,35 @@ h2 {
     border: none;
     cursor: pointer;
 }
-
 .submit-btn {
     background-color: #ba252e;
     color: #fff;
     margin-top: 10px;
     transition: background-color 0.3s;
 }
-
 .submit-btn:hover {
     background-color: #A62028;
 }
 
+/* botão de trocar login <-> register */
 .toggle-btn {
     background-color: transparent;
     color: #A62028;
     margin-top: 15px;
     font-size: 14px;
 }
-
 .toggle-btn:hover {
     text-decoration: underline;
 }
 
+/* mensagem de erro */
 .error-message{
     color: #ba252e;
     font-size: 12px;
     display: none;
 }
 
+/* ver senha */
 .toggle-password {
     position: absolute;
     right: 10px;
@@ -103,13 +100,9 @@ h2 {
     padding: 0;
     color: #333;
 }
-
 .toggle-password img{
     max-height: 3vh;
 }
-
-/* Ajuste para os campos de senha e a posição do ícone de olho */
-.input-group input[type="password"],
-.input-group input[type="text"] {
-    padding-right: 30px; /* Espaço para o ícone de olho */
+.input-group input[type="password"], .input-group input[type="text"] {
+    padding-right: 30px;
 }

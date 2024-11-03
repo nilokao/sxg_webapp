@@ -18,6 +18,7 @@
     to{opacity: 80%;}
 }
 
+/* default configs */
 a{
     text-decoration: none;
     color: inherit;
@@ -33,12 +34,40 @@ html, body{
 }
 #content{
     flex: 1;
+    padding: 125px 10vw 0px 10vw;
+    font-family: Afacad;
+    font-size: 150%;
 }
-
+#content h1{
+    font-family: Cocogoose;
+}
+#content h2{
+    font-family: Cocogoose;
+}
 body{
     flex: 1;
 }
+#content{
+    padding: 125px 10vw 0px 10vw;
+    font-family: Afacad;
+    font-size: 150%;
+}
 
+#content h1{
+    font-family: Cocogoose;
+}
+
+#content h2{
+    font-family: Cocogoose;
+}
+figure{
+    text-align: center;
+    max-width: 300px;
+    display: inline-block;
+    flex-flow: column;
+}
+
+/* header */
 header{
     position: fixed;
     height: 7vh;
@@ -50,17 +79,14 @@ header{
     font-family: Cocogoose;
     z-index: 1000;
 }
-
 header nav{
     display: flex;
     justify-content: space-between;
 }
-
 header nav a{
     text-align: center;
     width: 20vw;
 }
-
 header a{
     font-size: 2vw;
     color: #f9f9f9;
@@ -75,11 +101,11 @@ header a{
     -ms-user-select: none;
     user-select: none;
 }
-
 header a:hover{
     animation: fadeout 0.2s linear 1 normal forwards;
 }
 
+/* footer */
 footer{
     background-color: #333;
     padding: 10px 0px 10px 0px;
@@ -93,7 +119,6 @@ footer{
     font-family: Afacad;
     margin-top: 100px;
 }
-
 footer a{
     font-size: 1.5vw;
     color: #f9f9f9;
@@ -106,51 +131,27 @@ footer a{
     -ms-user-select: none;
     user-select: none;
 }
-
 footer a:hover{
     animation: fadeout 0.2s linear 1 normal forwards;
 }
-
 .footer-content{
     display: flex;
     align-items: center;
     padding: 0px 25px 0px 25px;
 }
-
 .footer-content img{
     max-width: 50px;
     margin-right: 10px;
 }
-
+/* redes sociais */
 .social-media{
     max-height: 40px;
     padding: 10px 25px 0px 15px;
 }
-
 footer a img:hover{
     animation: opacity 0.2s linear 1 normal forwards;
 }
 
-#content{
-    padding: 125px 10vw 0px 10vw;
-    font-family: Afacad;
-    font-size: 150%;
-}
-
-#content h1{
-    font-family: Cocogoose;
-}
-
-#content h2{
-    font-family: Cocogoose;
-}
-
-figure{
-    text-align: center;
-    max-width: 300px;
-    display: inline-block;
-    flex-flow: column;
-}
 .top-button {
     font-family: Afacad;
     position: fixed;
