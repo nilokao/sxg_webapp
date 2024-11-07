@@ -69,6 +69,8 @@ hr{
 
 .news {
     width: 400px; 
+    min-height: 550px;
+    align-content: center;
     margin: 10px; 
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -83,7 +85,7 @@ hr{
 }
 
 .image {
-    max-height: 250px; 
+    height: 250px; 
     width: 100%; 
     object-fit: cover; 
 }
