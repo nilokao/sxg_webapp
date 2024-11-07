@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario: {{ username }}</title>
-</head>
-<body>
-    <p>Seja bem-vindo à SX Gaming, {{ username }}</p>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Perfil de {{ user.username }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="{{ user.profile_picture_url }}" alt="Foto de {{ user.username }}" class="profile-pic">
+            <h1>{{ user.username }}</h1>
+        </div>
+        <div class="profile-info">
+            <h2>Informações do Usuário</h2>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Data de Cadastro:</strong> {{ user.date_joined.strftime('%d/%m/%Y') }}</p>
+        </div>
+        <div class="profile-bio">
+            <h2>Sobre {{ user.username }}</h2>
+            <p>{{ user.bio }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

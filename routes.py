@@ -159,3 +159,10 @@ def register_routes(app, db, login_manager):
     @app.route("/bet")
     def bet():
         return render_template('bet.html')
+    
+    @app.route("/user/<username>")
+    def user_profile(username):
+        user = User.query.filter_by(username=username).first()
+        if user is None:
+            abort(404)
+        return render_template('user.html', user=user);

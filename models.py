@@ -1,5 +1,6 @@
 from app import create_app, db
 from flask_login import UserMixin
+from datetime import datetime
 
 class User(db.Model, UserMixin):
     __tablename__ = 'usuarios'
@@ -10,6 +11,8 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150), nullable=False)
     profile_pic = db.Column(db.Text, nullable=True)
     is_admin = db.Column(db.Boolean, default=False)
+    bio = db.Column(db.Text, nullable=True)  
+    date_joined = db.Column(db.DateTime, default=datetime.utcnow)  
 
     news = db.relationship('News', backref='author', lazy=True)
 
