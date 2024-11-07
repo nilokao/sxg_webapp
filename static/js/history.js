@@ -8,27 +8,31 @@ document.addEventListener("DOMContentLoaded", function() {
         loader.style.display = "none";
         content.style.display = "block";
 
-        // Adiciona a animação de fade-in à primeira seção
+        // Aplica fade-in na primeira seção
         const firstSection = document.getElementById("comeco");
         firstSection.classList.add("fade-in-up");
-    }, 1500); // 2 segundos de delay (simulação)
+    }, 1500); // Delay simulado de 1,5 segundos
 });
 
-
-// Função para aplicar a animação de aparecer ao rolar a página
+// Função para aplicar as animações de aparecer e desaparecer ao rolar a página
 function revealOnScroll() {
-    const elements = document.querySelectorAll('.fade-in');
+    const fadeInElements = document.querySelectorAll('.fade-in');
     const windowHeight = window.innerHeight;
-    
-    elements.forEach((element) => {
+
+    fadeInElements.forEach((element) => {
         const elementTop = element.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 200) {
+        const elementBot = element.getBoundingClientRect().bottom;
+        if (elementTop < windowHeight - 100 && elementBot > 150) {
+            // Aplica fade-in quando o elemento entra na tela
             element.classList.add('appear');
+        }
+        else {
+            element.classList.remove('appear');
         }
     });
 }
 
-// Adiciona um evento de rolagem
+// Escuta o evento de rolagem para ativar as animações
 window.addEventListener('scroll', revealOnScroll);
 
 // Chama a função na carga inicial para mostrar os elementos visíveis

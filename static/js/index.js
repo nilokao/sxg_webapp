@@ -59,9 +59,10 @@ async function carregarUltimasNoticias() {
         console.error("Erro ao carregar notícias:", error);
     }
 }
-
 // Chama a função ao carregar a página
 document.addEventListener("DOMContentLoaded", carregarUltimasNoticias);
+
+
 
 // CALENDÁRIO
 const calendar = document.getElementById('calendar');

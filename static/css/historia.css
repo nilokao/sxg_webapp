@@ -115,26 +115,15 @@ footer{
     background-color: #555;
 }
 
-/* Animações de rolagem */
-.fade-in{
-    opacity: 0; /* Começa invisível */
-    transform: translateY(20px); /* Move o elemento um pouco para baixo */
-    transition: opacity 1s ease, transform 1s ease; /* Aumenta a duração para 1 segundo */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Move um pouco para baixo */
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.fade-in.appear{
-    opacity: 1; /* Fica visível */
-    transform: translateY(0); /* Retorna à posição original */
-}
-
-/* Efeito de fade-out */
-.fade-out{
-    opacity: 1; /* Começa visível */
-    transition: opacity 1s ease; /* Aumenta a duração para 1 segundo */
-}
-
-.fade-out.appear{
-    opacity: 0; /* Desaparece gradualmente */
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0); /* Volta para a posição original */
 }
 
 p{
@@ -205,4 +194,8 @@ figure img{
 body{
     padding: 0px;
     margin: 0;
+}
+
+.top-button{
+    z-index: 1001;
 }
