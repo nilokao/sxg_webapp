@@ -22,7 +22,7 @@ const navLinks = document.querySelectorAll('header nav a');
 
 // Define as dimensões originais e reduzidas
 const originalHeight = '7vh';
-const reducedHeight = '4vh';
+const reducedHeight = '5vh';
 const originalFontSize = '2vw';
 const reducedFontSize = '1.5vw'; // ajuste conforme necessário
 const scrollLimit = 250; // ajuste conforme necessário

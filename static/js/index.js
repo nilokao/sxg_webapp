@@ -169,7 +169,7 @@ function removeEvent(dateKey, index) {
 
 function toggleClearMode() {
     isClearMode = !isClearMode;
-    clearModeButton.innerText = isClearMode ? 'Desativar Modo de Limpeza' : 'Limpar Eventos';
+    clearModeButton.innerText = isClearMode ? 'Adicionar eventos' : 'Limpar eventos';
 }
 
 clearModeButton.addEventListener('click', toggleClearMode);
