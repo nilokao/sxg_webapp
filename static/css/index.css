@@ -43,6 +43,15 @@
     animation: rotationY 6s infinite linear;
 }
 
+hr{
+    border: none;
+    height: 1px;
+    background-color: #666;
+    opacity: 50%;
+    width: 100%; 
+    margin: 40px auto;
+}
+
 #lastnews {
     margin-left: 0;
     max-width: 90vw;
@@ -57,6 +66,7 @@
     margin: 0; 
     list-style-type: none; 
 }
+
 .news {
     width: 400px; 
     margin: 10px; 
@@ -87,10 +97,12 @@
 }
 
 .calendar-container{
-    width: 80%;
+    width: 60%;
+    height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    margin-bottom: 125px;
 }
 
 .calendar-header{
@@ -131,8 +143,8 @@
 }
 
 .days div{
-    padding: 10px;
-    min-height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: auto;
     font-size: larger;
     cursor: pointer;
@@ -166,9 +178,11 @@
 }
 
 .modal-content {
-    background: white;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
     padding: 20px;
-    width: 300px;
+    width: 500px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
@@ -183,8 +197,10 @@
 }
 
 #eventInput{
-    max-width: auto;
+    width: 100%;
+    max-width: 95%;
     padding: 10px;
+    margin-right: 10px;
     margin: 10px 0;
 }
 
@@ -222,8 +238,7 @@
 #viewEventsModal .modal-content {
     background-color: #f9f9f9;
     padding: 20px;
-    width: 300px;
-    max-height: 400px;
+    width: 500px;
     overflow-y: auto;
 }
 
