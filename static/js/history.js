@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1500); // 2 segundos de delay (simulação)
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
     const header = document.querySelector('header');
@@ -54,6 +53,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const section = document.querySelectorAll("section");
     const links = document.querySelectorAll(".navbar-item");
     const content = document.getElementById("content");
+    const navLinks = document.querySelectorAll('header nav a');
+    const originalHeight = '7vh';
+    const reducedHeight = '4vh';
+    const originalFontSize = '2vw';
+    const reducedFontSize = '1.5vw'; // ajuste conforme necessário
+    const scrollLimit = 250; // ajuste conforme necessário
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollLimit) {
+            // Reduz altura do header e tamanho da fonte
+            header.style.height = reducedHeight;
+            header.style.transition = 'height 0.3s ease';
+            
+            navLinks.forEach(link => {
+                link.style.fontSize = reducedFontSize;
+                link.style.transition = 'font-size 0.3s ease';
+            });
+        } else {
+            // Restaura altura do header e tamanho da fonte
+            header.style.height = originalHeight;
+            
+            navLinks.forEach(link => {
+                link.style.fontSize = originalFontSize;
+            });
+        }
+    });
+    
 
 // Expande a navbar ao passar o mouse
     navbar.addEventListener('mouseenter', () => {
@@ -91,3 +117,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    const topButton = document.getElementById("topButton");
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        topButton.classList.add('show');
+    } else {
+        topButton.classList.remove('show');
+    }
+}
+
+function voltarAoTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}

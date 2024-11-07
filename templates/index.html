@@ -21,23 +21,64 @@ SX Gaming | Home
 
     <br><br>
 
-<h2 style="text-align: center;">Últimas notícias:</h2>
-<div id="lastnews">
-    <ul id="news-list">
-        {% for noticia in noticias %}
-            <li>
-                <div class="news">
-                    <img class="image" src="{{ noticia.image_link }}" alt="{{ noticia.titulo }}">
-                    <h3>{{ noticia.title }}</h3>
-                    <p><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></p>
-                    <p>{{ noticia.resume }}</p>
+    <h2 style="text-align: center;">Últimas notícias:</h2>
+    <div id="lastnews">
+        <ul id="news-list">
+            {% for noticia in noticias %}
+                <li>
+                    <div class="news">
+                        <img class="image" src="{{ noticia.image_link }}" alt="{{ noticia.titulo }}">
+                        <h3>{{ noticia.title }}</h3>
+                        <p><small>{{ noticia.date_published.strftime('%d/%m/%Y - %H:%M') }}</small></p>
+                        <p>{{ noticia.resume }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="engloba-calendar">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prevMonth">&#10094;</button>
+                <div id="monthYear"></div>
+                <button id="nextMonth">&#10095;</button>
+                <button id="clearModeButton">Limpar Eventos</button>
+            </div>
+            <div class="calendar" id="calendar">
+                <div class="day-names">
+                    <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
                 </div>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
+                <div class="days" id="days"></div>
+            </div>
+        </div>
+
+        <!-- Modal para adicionar eventos -->
+        <div class="modal" id="eventModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Adicionar Evento</h2>
+                <input type="text" id="eventInput" placeholder="Nome do evento">
+                <button id="addEventButton">Adicionar Evento</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para excluir eventos -->
+    <div id="viewEventsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeViewModal">&times;</span>
+            <h2>Eventos</h2>
+            <ul id="eventList"></ul>
+        </div>
+    </div>
+
 </div>
 
-<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 <button class="top-button" id="topButton" onclick="voltarAoTopo()">▲</button>
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
 {% endblock %}

@@ -1,9 +1,9 @@
-@font-face {
+@font-face{
     font-family: "Afacad";
     src: url("../fonts/AfacadFlux-VariableFont_slnt\,wght.ttf");
 }
 
-@font-face {
+@font-face{
     font-family: "Cocogoose";
     src: url("../fonts/Cocogoose-Pro-Regular-trial.ttf");
 }
@@ -18,7 +18,7 @@ body{
 }
 
 /* Navbar padrão */
-.navbar {
+.navbar{
     position: fixed;
     top: 0;
     left: 0;
@@ -31,17 +31,17 @@ body{
     transition: width 0.3s ease; /* Animação suave para expandir/recolher */
 }
 
-.navbar ul {
+.navbar ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.navbar li {
+.navbar li{
     margin: 15px 0;
 }
 
-.navbar a {
+.navbar a{
     color: #f9f9f9;
     font-family: Afacad;
     font-weight: bold;
@@ -56,13 +56,13 @@ body{
 }
 
 /* Navbar expandida */
-.navbar-expanded {
+.navbar-expanded{
     width: 10vw; /* Largura da navbar quando expandida */
 }
 
 /* Estilos do Header */
-header {
-    transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
+header{
+    transition: margin-left 0.3s ease;
 }
 
 footer{
@@ -72,7 +72,7 @@ footer{
 }
 
 /* Estilos do Conteúdo */
-#content {
+#content{
     transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
     padding: 45px 0 0 0;
     margin-left: 3vw;
@@ -81,59 +81,59 @@ footer{
 }
 
 /* Deslocamento do Header e Conteúdo */
-.content-shifted {
+.content-shifted{
     margin-left: 10vw;
     max-width: 90vw; /* Alinhado com a navbar expandida */
 }
 
 /* Estilo das seções */
-.section {
+.section{
     transition: margin-left 0.3s ease; /* Transição suave para o deslocamento */
     max-width: 100%;
     padding-top: 80px;
     padding-bottom: 80px;
     padding-left: 3vw;
-    padding-right: 3vw;
+    padding-right: 5vw;
     color: #f9f9f9;
 }
 
 
 /* Backgrounds personalizados */
-.bg-1 {
+.bg-1{
     background-color: #111;
 }
-.bg-2 {
+.bg-2{
     background-color: #222;
 }
-.bg-3 {
+.bg-3{
     background-color: #333;
 }
-.bg-4 {
+.bg-4{
     background-color: #444;
 }
-.bg-5 {
+.bg-5{
     background-color: #555;
 }
 
 /* Animações de rolagem */
-.fade-in {
+.fade-in{
     opacity: 0; /* Começa invisível */
     transform: translateY(20px); /* Move o elemento um pouco para baixo */
     transition: opacity 1s ease, transform 1s ease; /* Aumenta a duração para 1 segundo */
 }
 
-.fade-in.appear {
+.fade-in.appear{
     opacity: 1; /* Fica visível */
     transform: translateY(0); /* Retorna à posição original */
 }
 
 /* Efeito de fade-out */
-.fade-out {
+.fade-out{
     opacity: 1; /* Começa visível */
     transition: opacity 1s ease; /* Aumenta a duração para 1 segundo */
 }
 
-.fade-out.appear {
+.fade-out.appear{
     opacity: 0; /* Desaparece gradualmente */
 }
 
@@ -146,7 +146,7 @@ html{
 }
 
 /* Estilo da tela de carregamento */
-.loader {
+.loader{
     position: fixed;
     top: 0;
     left: 0;
@@ -161,11 +161,11 @@ html{
     font-family: Cocogoose; /* Substitua pela sua fonte desejada */
 }
 
-.loader-inner {
+.loader-inner{
     text-align: center; /* Centraliza o texto do loader */
 }
 
-.spinner {
+.spinner{
     border: 8px solid rgba(255, 255, 255, 0.3);
     border-top: 8px solid #fff;
     border-radius: 50%;
@@ -175,30 +175,30 @@ html{
     margin: 20px auto; /* Adiciona margens automáticas para centralizar */
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes spin{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
 }
 
 /* Estilo para a animação de fade-in */
-.fade-in-up {
+.fade-in-up{
     opacity: 0;
     transform: translateY(20px); /* Inicia 20px abaixo da posição original */
     animation: fadeInUp 0.8s forwards; /* Define a duração da animação */
 }
 
-@keyframes fadeInUp {
-    0% {
+@keyframes fadeInUp{
+    0%{
         opacity: 0;
         transform: translateY(20px); /* Começa abaixo */
     }
-    100% {
+    100%{
         opacity: 1;
         transform: translateY(0); /* Termina na posição original */
     }
 }
 
-figure img {
+figure img{
     max-height: 200px;
 }
 

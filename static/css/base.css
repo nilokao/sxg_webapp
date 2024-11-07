@@ -68,31 +68,34 @@ figure{
 }
 
 /* header */
-header{
+header {
     position: fixed;
-    height: 7vh;
+    height: 7vh; /* altura original */
     top: 0;
     width: 100%;
     align-content: center;
     background-color: #333;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0;
     font-family: Cocogoose;
     z-index: 1000;
+    transition: height 0.3s ease; /* Suaviza a transição da altura */
 }
+
 header nav{
     display: flex;
     justify-content: space-between;
 }
+
 header nav a{
     text-align: center;
     width: 20vw;
 }
+
 header a{
     font-size: 2vw;
     color: #f9f9f9;
     display: inline-block;
     padding: 5px, 15px;
-    margin: 10px;
     font-weight: bolder;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -101,6 +104,7 @@ header a{
     -ms-user-select: none;
     user-select: none;
 }
+
 header a:hover{
     animation: fadeout 0.2s linear 1 normal forwards;
 }
@@ -117,7 +121,9 @@ footer{
     bottom: 0;
     margin-top: auto;
     font-family: Afacad;
+    margin-top: 20px;
 }
+
 footer a{
     font-size: 1.5vw;
     color: #f9f9f9;
@@ -130,27 +136,32 @@ footer a{
     -ms-user-select: none;
     user-select: none;
 }
+
 footer a:hover{
     animation: fadeout 0.2s linear 1 normal forwards;
 }
+
 .footer-content{
     display: flex;
     align-items: center;
     padding: 0px 25px 0px 25px;
 }
+
 .footer-content img{
     max-width: 50px;
     margin-right: 10px;
 }
-/* redes sociais */
+
 .social-media{
     max-height: 40px;
     padding: 10px 25px 0px 15px;
 }
+
 footer a img:hover{
     animation: opacity 0.2s linear 1 normal forwards;
 }
 
+/* botao top */
 .top-button {
     font-family: Afacad;
     position: fixed;
