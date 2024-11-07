@@ -10,7 +10,7 @@
 <div id="content">
     <div class="profile-container">
         <div class="profile-header">
-            <img src="{{ user.profile_picture_url }}" alt="Foto de {{ user.username }}" class="profile-pic">
+            <img src="{{ user.profile_pic }}" style="user-select: none; -webkit-user-drag: none;" alt="Foto de {{ user.username }}" class="profile-pic">
             <h1>{{ user.username }}</h1>
         </div>
         <div class="profile-info">
