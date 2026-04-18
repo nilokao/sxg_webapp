@@ -22,6 +22,74 @@
     }
 }
 
+@media (max-width: 600px) {
+    body{
+        max-width: 100%;
+        width: auto;
+    }
+
+    #content{
+        padding: 1vw;
+        padding-top: 10vw;
+        width: 98vw;
+    }
+
+    header{
+        width: 100vw;
+        height: 7vw;
+    }
+
+    header a{
+        font-size: 12px;
+    }
+
+    .showdex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80vw;
+        padding-left: 10vw;
+    }
+
+    .showdex p{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #samuraisxg{
+        max-height: 100px;
+    }
+
+    hr{
+        height: 1px;
+        background-color: #666;
+        opacity: 30%;
+        width: 40vw; 
+        margin: 40px auto;
+    }
+
+    #lastnews {
+        margin-left: 0;
+        width: 600px;
+    }
+    
+    #news-list{
+        padding: 0; 
+        margin: 0; 
+        list-style-type: none; 
+    }
+
+    .news{
+        width: 150px; 
+    }
+
+    .image {
+        height: 50px; 
+        width: 100%; 
+        object-fit: cover; 
+    }
+}
+
 .showdex{
     display: flex;
     align-items: center;
@@ -39,7 +107,8 @@
 }
 
 #samuraisxg{
-    max-height: 300px;
+    height: 300px;
+    width: auto;
     animation: rotationY 6s infinite linear;
 }
 
@@ -96,6 +165,21 @@ hr{
     justify-content: center;
     align-items: center;
     font-family: Afacad;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#engloba-calendar button:hover{
+    color: 0.2s;
+    transition: 0.2s;   
+}
+
+#engloba-calendar button:hover{
+    color: #333;
 }
 
 .calendar-container{
@@ -153,6 +237,9 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: 0.2s;
+    background-color: 0.2s;
+    transition: 0.3s;
 }
 
 .days div:hover {
